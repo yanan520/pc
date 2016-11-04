@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+			margin: 0;
+			padding: 0;
+		}
+			html body{
+				width: 100%;
+				height: 100%;
+			}
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+			ul{
+				list-style: none;
+			}
+			a:hover{
+				text-decoration: underline;
+				color: red;
+			}
+			#all{
+				margin: 0 auto;
+				width: 1300px;
+				height: 100%;
+				position: relative;
+			}
+			
+			#all #head{
+				position: relative;
+				width: 1300px;
+				height: 450px;
+			}
+			#head #div1{
+				position: relative;
+				width: 1300px;
+				height: 100px;
+			}
+			#head #div1 img{
+				width: 100%;
+				height: 100%;
+			}
+			#head #div2{
+				width: 1300px;
+				height: 50px;
+				background-color: #BBBBBB;
+				position: relative;
+			}
+			#head #div2 .div1{
+				position: absolute;
+				left: 50px;
+				width: 150px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			#head #div2 .div2{
+				position: absolute;
+				left: 250px;
+				width: 250px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			#head #div2 .div3{
+				position: relative;
+				width: 1300px;
+				left:600px;
+				width: 800px;
+				height: 50px;
+				
+			}
+			#head #div2 .div3 ul{
+				list-style: none;
+			}
+			#head #div2 .div3 ul li{
+				float: left;
+				width: 80px;
+				height: 50px;
+				text-align:center;
+				line-height: 50px;
+			}
+			#head #div3{
+				width: 1300px;
+				height: 250px;
+				background-color: #E2F2FF;
+				position: absolute;
+			}
+			#head #div3 .div1{
+				position: absolute;
+				left: 50px;
+				top: 50px;
+				width: 150px;
+				height: 100px;
+			}
+			#head #div3 .div1 img{
+				width: 100%;
+				height: 100%;
+			}
+			#head #div3 .div2{
+				position: absolute;
+				left: 250px;
+				top: 50px;
+				width: 150px;
+				height: 100px;
+			}
+			#head #div3 .div2 img{
+				width: 100%;
+				height: 100%;
+			}
+			#head #div3 .div3{
+				position: absolute;
+				left: 500px;
+				top: 50px;
+				width: 420px;
+				height: 100px;
+			}
+			#head #div3 .div3 input{
+				display: block;
+				width: 280px;
+				height: 50px;
+				position: absolute;
+				border: 2px solid red;
+				left: 0;
+				top: 0;
+			}
+			#head #div3 .div3 span1{
+				display: block;
+				position: absolute;
+				left: 284px;
+				width: 50px;
+				height: 55px;
+				text-align: center;
+				line-height: 54px;
+				background: red;	
+			}
+			#head #div3 .div3 span1 a{
+				color: white;
+			}
+			#head #div3 .div3 .div4{
+				display: block;
+				position: absolute;
+				right: -80px;
+				top: 0;
+				width: 80px;
+				height: 54px;
+				text-align: center;
+				line-height: 50px;
+			}
+			#head #div3 .div3 .div5{
+				position: absolute;
+				left: -300px;
+				top: 54px;
+				width: 420px;
+				height: 40px;
+				
+			}
+			#head #div3 .div3 .div5 ul{
+				list-style: none;
+			}
+			#head #div3 .div3 .div5 ul li{
+				float: left;
+				width: 70px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+			}
+			#head #div3 .div3 .div5 ul li a{
+				color: #000000;
+			}
+			#head #div3 .div4{
+				position: absolute;
+				right: 100px;
+				top: 50px;
+				width: 150px;
+				height: 100px;
+			}
+			#head #div3 .div4 img{
+				width: 100%;
+				height: 100%;
+			}
+			#all #body{
+				position: absolute;
+				top: 500px;
+				width: 1300px;
+				height: 600px;
+		        border: 1px solid #EAEAEA;
+			}
+			#all #body .div1{
+				position: absolute;
+				left: 150px;
+				width: 200px;
+				height: 50px;
+				background: green;
+				color: white;
+				line-height: 50px;
+				text-align: center;
+			}
+  /*选项卡*/
+			#all #body .div1 #List1{
+				position:absolute;
+				z-index: 2;
+				bottom: -450px;
+				width: 200px;
+				height: 450px;
+				background: #2D8800;
+				display: none;
+				background:#2D8800;
+			}
+			#all #body .div1 #List1 ul {
+				list-style: none;
+			}
+			#all #body .div1 #List1 ul li{
+				line-height: 40px;
+				text-align: center;
+				height: 40px;
+				width: 200px;
+			}
+			#all #body .div1 #List1 ul li.select10{
+				background:#A7CBFF;
+			}
+			#all #body .div1 #List1 ul li a{
+				color: white;
+			}
+			#all #body .div1 #List1 #List2{
+				position: absolute;
+				z-index: 2;
+				top: 0px;
+				left: 200px;
+				width: 600px;
+				height: 500px;
+				display: none;
+			}
+		#all #body .div1 #List1 #List2 .contant{
+			position: absolute;
+			z-index: 3;
+			top: 0;
+			left: 0;
+			width: 600px;
+			height: 450px;
+			border: 1px solid #BBBBBB;
+			background:#CADEFF;
+			display: none;
+		}
+		#all #body .div1 #List1 #List2 .contant ul{
+			list-style: none;
+		}
+		#all #body .div1 #List1 #List2 .contant li{
+			width: 450px;
+			height: 40px;
+		}
+			#all #body .div2{
+				position: absolute;
+				left: 350px;
+				width: 800px;
+				height: 50px;
+			}
+			#all #body .div2 ul{
+				list-style: none;
+			}
+			#all #body .div2 ul li{
+				float: left;
+				width: 80px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+			}
+			#all #body .div3{
+				position: absolute;
+				right: 20px;
+				width: 150px;
+				background:url(img/1460855499342.png) no-repeat 0 0 ;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+		 .warp{
+			position: relative;
+			z-index: 1;
+			top: 100px;
+			height: 500px;
+			width: 400px;
+			border: 1px solid green;
+		}
+		.warp #box{
+			  position: absolute;
+			  z-index: 2;
+			  width:400px;
+			  height: 400px;
+			  border: 1px solid red;
+		}
+		 .warp #box img{
+			 width: 400px;
+			 height: 400px;
+		}
+		.warp .big{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			left: 500px;
+			height: 400px;
+			width: 400px;
+			overflow: hidden;
+			display: none;
+			border: 1px solid blue;
+		}
+		.warp .big img{
+			position: absolute;
+			width:800px;
+			height:800px;
+		}
+		#box #shade{
+			position: absolute;
+			top: 0;
+			left: 0;
+		    background:rgba(255,180,255,0.6);
+            width: 250px;
+            height: 250px;
+            display: none;
+         
+		}
+		 #div1{
+		 	position: absolute;
+		 	top:400px;
+		 	width: 400px;
+		 	height: 100px;
+		 }
+		
+		 #div1 ul li{
+		 	 width:100px;
+		 	 height: 90px;
+		 	 top: -100px;
+		 	 margin: 5px;
+		 	 float: left;
+		 	 border: 1px solid red;
+		 	 text-align: center;
+             line-height: 100px;
+		 }
+		 #div1 ul li img{
+		 	   width: 80px;
+		 	   height: 80px;
+		 	  
+		 }
+		 #body #right{
+		 	position: absolute;
+		 	z-index: 1;
+		 	top: 100px;
+		 	right: 200px;
+		 	height: 400px;
+		 	width: 400px;
+		}
+		#body #right span.select1{
+			display: block;
+			position: absolute;
+			top: 10px;
+			width: 300px;
+			height: 50px;
+			border-bottom: 1px dashed #BBBBBB;
+		}
+		#body #right span.select2{
+			display: block;
+			position: absolute;
+			top: 70px;
+			width: 120px;
+			height: 50px;
+		}
+		#body #right #div1{
+			position: absolute;
+			top: 140px;
+			width: 120px;
+			height: 50px;
+			
+		}	
+		#body #right #div1 ul{
+			list-style: none;
+			width: 120px;
+			height: 50px;
+		}
+		#body #right #div1 ul li{
+			float: left;
+			width: 30px;
+			height: 48px;
+			text-align: center;
+			line-height: 48px;
+			border: 1px solid #CDCDCD;
+			margin: 0;
+			cursor: pointer;
+		}
+		#body #right #div2{
+			position: absolute;
+			top: 180px;
+			width: 150px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background:#FF0000;
+			color: white;
+			cursor: pointer;
+		}
+		#body #right #div3{
+			position: absolute;
+			top: 180px;
+			left: 170px;
+			width: 150px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			border: 1px solid red;
+			cursor: pointer;
+		}
+		#body #right #div3 .div1{
+			position: absolute;
+			top: -5px;
+			width: 100px;
+			height: 100px;
+			display: none;
+		}
+		#body #right #div3 .div1 img{
+			width: 100%;
+			height: 100%;
+		}
+	
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div id="head">
+				<div id="div1">
+					<a href="#"><img src="img/1475027571108.jpg"></a>
+				</div>
+				<div id="div2">
+					<div class="div1">
+						当前城市：<a href="#">北京</a>
+					</div>
+					<div class="div2">
+					hi,欢迎来我买网!&nbsp;<a href="loged.html">登录</a>&nbsp;<a href="reg.html">注册</a>
+					</div>
+					<div class="div3">
+						<ul>
+							<li><a href="#">我的账户</a></li>
+							<li><a href="shopping.html">购物车</a></li>
+							<li><a href="#">客户服务</a></li>
+							<li><a href="#">大客户</a></li>
+							<li><a href="#">B2B</a></li>
+							<li><a href="#">图片1</a></li>
+							<li><a href="#">图片2</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="div3">
+					<div class="div1">
+						<a href="#"><img src="img/1472640153727.png"></a>
+					</div>
+					<div class="div2">
+						<img src="img/1475049345059.jpg">
+					</div>
+					<div class="div3">
+						<input placeholder="        919就要酒  来就送5元  满100减100" />
+						<span1><a href="#">搜索</a></span>
+							<div class="div4">高级搜素</div>
+							<div class="div5">
+								<ul>
+									<li><a href="#">大闸蟹</a></li>
+									<li><a href="#">酒</a></li>
+									<li><a href="#">大米</a></li>
+									<li><a href="#">bigbang</a></li>
+									<li><a href="#">iphone7</a></li>
+								</ul>
+							</div>
+					</div>
+					<div class="div4">
+						<img src="img/1473142235649.jpg">
+					</div>
+				</div>
+			</div>
+		    <div id="body">
+				<div class="div1">
+					<a href="#"><font color="white">全部商品分类</font></a>
+  <!--选项卡	-->			<div id="List1">
+						   <ul>
+                        <li class="ESP"><a href="#">肉禽水产 水果蔬菜</a></li>
+						<li class="ESP"><a href="#">进口生鲜 进口水果</a></li>
+						<li class="ESP"><a href="#">进口食品 进口直采</a></li>
+						<li class="ESP"><a href="#">酒 饮料/冲饮 茶</a></li>
+						<li class="ESP"><a href="#">休闲食品 地方特产</a></li>
+						<li class="ESP"><a href="#">营养健康 奶制品</a></li>
+						<li class="ESP"><a href="#">粮油副食 调味干货</a></li>
+						<li class="ESP"><a href="#">母婴食品 母婴用品</a></li>
+						<li class="ESP"><a href="#">个人美妆 家用清洁</a></li>
+						<li class="ESP"><a href="#">厨具家纺 家电3C</a></li>
+						<li class="ESP"><a href="#">礼品礼券</a></li>
+						   </ul>
+						   <div id="List2">
+						   	<div class="contant">
+						<ul>
+							<li><b>精品水果</b>&nbsp;<span><a href="#">樱桃</a></span><span><a href="#">奇异果</a></span><span><a href="#">橙子</a></span><span><a href="#">苹果</a></span><span><a href="#">热带水果</a></span><span><a href="#">葡萄提子</a></span><span><a href="#">瓜</a></span><span><a href="#">芒果</a></span></li>
+							<li><b>海鲜水产</b>&nbsp;<span><a href="#">虾类</a></span><span><a href="#">鱼类</a></span><span><a href="#">贝类</a></span><span><a href="#">海鲜</a></span><span><a href="#">蟹类</a></span><span><a href="#">干货</a></span></li>
+							<li><b>生肉禽蛋</b>&nbsp;<span><a href="#">进口肉食</a></span><span><a href="#">羊肉</a></span><span><a href="#">牛肉</a></span><span><a href="#">猪肉</a></span><span><a href="#">畜肉</a></span><span><a href="#">蛋类</a></span></li>
+							<li><b>精品蔬菜</b>&nbsp;<span><a href="#">有机蔬菜</a></span><span><a href="#">精品蔬菜</a></span><span><a href="#">加工蔬菜</a></span><span><a href="#">冷冻蔬菜</a></span></li>
+							<li><b>低温饮品</b>&nbsp;<span><a href="#">鲜奶<a></span><span><a href="#">酸奶</a></span><span><a href="#">黄油乳酪</a></span><span><a href="#">低温果汁</a></span><span><a href="#">低温饮品</a></span></li>
+							<li><b>精选主食</b>&nbsp;<span><a href="#">饺子混沌</a></span><span><a href="#">包子馒头</a></span><span><a href="#">汤圆年糕</a></span><span><a href="#">西式糕点</a></span><span><a href="#">中式糕点</a></span></li>
+							<li><b>熟食/佐餐</b>&nbsp;<span><a href="#">配菜</a></span><span><a href="#">调味品</a></span><span><a href="#">火锅丸子</a></span><span><a href="#">熟肉肠类</a></span><span><a href="#">火腿</a></span></li>
+							<li><b>冰激凌</b>&nbsp;<span><a href="#">冰激凌</a></span><span><a href="#">雪糕</a></span><span><a href="#">冰棍</a></span></li>
+							<li><b>礼品礼券</b>&nbsp;<span><a href="#">肉类礼盒</a></span><span><a href="#">海鲜礼盒</a></span><span><a href="#"><span><a href="#">特色礼品</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口生鲜</b>&nbsp;<span><a href="#">进口海鲜</a></span><span><a href="#">进口牛肉</a></span><span><a href="#">进口猪肉</a></span><span><a href="#">进口羊肉</a></span></li>
+							<li><b>进口水果</b>&nbsp;<span><a href="#">车厘子</a></span><span><a href="#">奇异果</a></span><span><a href="#">榴莲</a></span><span><a href="#">进口橙子</a></span><span><a href="#">进口苹果</a></span><span><a href="#">火龙果</a></span></li>	
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>海外直采酒</b>&nbsp;<span><a href="#">进口直采洋酒</a></span><span><a href="#">进口直采啤酒</a></span><span><a href="#">进口直采葡萄酒</a></span></li>
+							<li><b>白酒/养生酒</b>&nbsp;<span><a href="#">精装低度酒</a></span><span><a href="#">简装高度酒</a></span><span><a href="#">简装低度酒</a></span><span><a href="#">整箱酒</a></span></li>
+							<li><b>葡萄酒</b>&nbsp;<span><a href="#">进口干红</a></span><span><a href="#">进口干白</a></span><span><a href="#">进口桃红</a></span><span><a href="#">国产干红</a></span></li>
+							<li><b>啤酒</b>&nbsp;<span><a href="#">整箱啤酒</a></span><span><a href="#">进口听装啤酒</a></span><span><a href="#">进口瓶装啤酒</a></span></li>
+							<li><b>洋酒</b>&nbsp;<span><a href="#">威士忌<a></span><span><a href="#">白兰地</a></span><span><a href="#">伏特加</a></span><span><a href="#">朗姆酒</a></span><span><a href="#">龙舌兰</a></span></li>
+							<li><b>水/饮料</b>&nbsp;<span><a href="#">包装饮用水</a></span><span><a href="#">功能饮料</a></span><span><a href="#">果蔬饮料</a></span></li>
+							<li><b>咖啡/冲调</b>&nbsp;<span><a href="#">咖啡</a></span><span><a href="#">奶茶</a></span><span><a href="#">蜂蜜</a></span><span><a href="#">果味冲调品</a></span><span><a href="#">其他冲调品</a></span></li>
+							<li><b>早餐谷物</b>&nbsp;<span><a href="#">谷物麦片</a></span><span><a href="#">成人奶粉</a></span><span><a href="#">芝麻糊</a></span></li>
+							<li><b>茶</b>&nbsp;<span><a href="#">绿茶</a></span><span><a href="#">铁观音</a></span><span><a href="#"><span><a href="#">普洱茶</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>海外直采酒</b>&nbsp;<span><a href="#">进口直采洋酒</a></span><span><a href="#">进口直采啤酒</a></span><span><a href="#">进口直采葡萄酒</a></span></li>
+							<li><b>白酒/养生酒</b>&nbsp;<span><a href="#">精装低度酒</a></span><span><a href="#">简装高度酒</a></span><span><a href="#">简装低度酒</a></span><span><a href="#">整箱酒</a></span></li>
+							<li><b>葡萄酒</b>&nbsp;<span><a href="#">进口干红</a></span><span><a href="#">进口干白</a></span><span><a href="#">进口桃红</a></span><span><a href="#">国产干红</a></span></li>
+							<li><b>啤酒</b>&nbsp;<span><a href="#">整箱啤酒</a></span><span><a href="#">进口听装啤酒</a></span><span><a href="#">进口瓶装啤酒</a></span></li>
+							<li><b>洋酒</b>&nbsp;<span><a href="#">威士忌<a></span><span><a href="#">白兰地</a></span><span><a href="#">伏特加</a></span><span><a href="#">朗姆酒</a></span><span><a href="#">龙舌兰</a></span></li>
+							<li><b>水/饮料</b>&nbsp;<span><a href="#">包装饮用水</a></span><span><a href="#">功能饮料</a></span><span><a href="#">果蔬饮料</a></span></li>
+							<li><b>咖啡/冲调</b>&nbsp;<span><a href="#">咖啡</a></span><span><a href="#">奶茶</a></span><span><a href="#">蜂蜜</a></span><span><a href="#">果味冲调品</a></span><span><a href="#">其他冲调品</a></span></li>
+							<li><b>早餐谷物</b>&nbsp;<span><a href="#">谷物麦片</a></span><span><a href="#">成人奶粉</a></span><span><a href="#">芝麻糊</a></span></li>
+							<li><b>茶</b>&nbsp;<span><a href="#">绿茶</a></span><span><a href="#">铁观音</a></span><span><a href="#"><span><a href="#">普洱茶</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>海外直采酒</b>&nbsp;<span><a href="#">进口直采洋酒</a></span><span><a href="#">进口直采啤酒</a></span><span><a href="#">进口直采葡萄酒</a></span></li>
+							<li><b>白酒/养生酒</b>&nbsp;<span><a href="#">精装低度酒</a></span><span><a href="#">简装高度酒</a></span><span><a href="#">简装低度酒</a></span><span><a href="#">整箱酒</a></span></li>
+							<li><b>葡萄酒</b>&nbsp;<span><a href="#">进口干红</a></span><span><a href="#">进口干白</a></span><span><a href="#">进口桃红</a></span><span><a href="#">国产干红</a></span></li>
+							<li><b>啤酒</b>&nbsp;<span><a href="#">整箱啤酒</a></span><span><a href="#">进口听装啤酒</a></span><span><a href="#">进口瓶装啤酒</a></span></li>
+							<li><b>洋酒</b>&nbsp;<span><a href="#">威士忌<a></span><span><a href="#">白兰地</a></span><span><a href="#">伏特加</a></span><span><a href="#">朗姆酒</a></span><span><a href="#">龙舌兰</a></span></li>
+							<li><b>水/饮料</b>&nbsp;<span><a href="#">包装饮用水</a></span><span><a href="#">功能饮料</a></span><span><a href="#">果蔬饮料</a></span></li>
+							<li><b>咖啡/冲调</b>&nbsp;<span><a href="#">咖啡</a></span><span><a href="#">奶茶</a></span><span><a href="#">蜂蜜</a></span><span><a href="#">果味冲调品</a></span><span><a href="#">其他冲调品</a></span></li>
+							<li><b>早餐谷物</b>&nbsp;<span><a href="#">谷物麦片</a></span><span><a href="#">成人奶粉</a></span><span><a href="#">芝麻糊</a></span></li>
+							<li><b>茶</b>&nbsp;<span><a href="#">绿茶</a></span><span><a href="#">铁观音</a></span><span><a href="#"><span><a href="#">普洱茶</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>海外直采酒</b>&nbsp;<span><a href="#">进口直采洋酒</a></span><span><a href="#">进口直采啤酒</a></span><span><a href="#">进口直采葡萄酒</a></span></li>
+							<li><b>白酒/养生酒</b>&nbsp;<span><a href="#">精装低度酒</a></span><span><a href="#">简装高度酒</a></span><span><a href="#">简装低度酒</a></span><span><a href="#">整箱酒</a></span></li>
+							<li><b>葡萄酒</b>&nbsp;<span><a href="#">进口干红</a></span><span><a href="#">进口干白</a></span><span><a href="#">进口桃红</a></span><span><a href="#">国产干红</a></span></li>
+							<li><b>啤酒</b>&nbsp;<span><a href="#">整箱啤酒</a></span><span><a href="#">进口听装啤酒</a></span><span><a href="#">进口瓶装啤酒</a></span></li>
+							<li><b>洋酒</b>&nbsp;<span><a href="#">威士忌<a></span><span><a href="#">白兰地</a></span><span><a href="#">伏特加</a></span><span><a href="#">朗姆酒</a></span><span><a href="#">龙舌兰</a></span></li>
+							<li><b>水/饮料</b>&nbsp;<span><a href="#">包装饮用水</a></span><span><a href="#">功能饮料</a></span><span><a href="#">果蔬饮料</a></span></li>
+							<li><b>咖啡/冲调</b>&nbsp;<span><a href="#">咖啡</a></span><span><a href="#">奶茶</a></span><span><a href="#">蜂蜜</a></span><span><a href="#">果味冲调品</a></span><span><a href="#">其他冲调品</a></span></li>
+							<li><b>早餐谷物</b>&nbsp;<span><a href="#">谷物麦片</a></span><span><a href="#">成人奶粉</a></span><span><a href="#">芝麻糊</a></span></li>
+							<li><b>茶</b>&nbsp;<span><a href="#">绿茶</a></span><span><a href="#">铁观音</a></span><span><a href="#"><span><a href="#">普洱茶</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>
+						   </div>
+					    </div>
+				</div>
+				<div class="div2">
+					<ul>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="#">团购</a></li>
+						<li><a href="#">大闸蟹</a></li>
+						<li><a href="#">试吃</a></li>
+						<li><a href="#">每日鲜</a></li>
+						<li><a href="#">我买酒</a></li>
+						<li><a href="#">我买自有</a></li>
+						<li><a href="#">中粮专区</a></li>
+						<li><a href="#">包邮直送</a></li>
+						<li><a href="#">我买海淘</a></li>
+					</ul>
+				</div>
+				<div class="div3">
+					<a href="shopping.html">&nbsp;&nbsp;购物车</a>
+				</div>
+			    <div class="warp">
+					<div id="box">
+			            <img src="img/10347145_1_pic270_4018.jpg" id="oImg"/ >
+			               <span id="shade"></span>
+		            </div>
+		            <div class="big">
+			            <img src="img/10347145_1_pic270_4018.jpg"/>
+		            </div>
+		           <div id="div1">
+			           <ul>
+				           <li><img src="img/10347145_1_pic270_4018.jpg"  big-src="img/10347145_1_pic270_4018.jpg"></li>
+				           <li><img src="img/10321634_1_pic100_3859.jpg"  big-src="img/10321634_1_pic100_3859.jpg"></li>
+				           <li><img src="img/1467970694334.jpg"  big-src="img/1467970694334.jpg""></li>
+		            </div>
+		            
+			    </div>
+			    <div id="right">
+			        <span class="select1">
+			    	    <font size="5"><a>【自营】库尔勒香梨盒装4枚</a></font>
+			        </span>
+			        <span class="select2">
+			         <font color="red" size="4">￥<a>9.90</a></font>
+			        </span>
+			        <div id="div1">
+			        	<ul>
+			        		<li>-</li>
+			        		<li>1</li>
+			        		<li>+</li>
+			        	</ul>
+			        </div>
+			        <div id="div2" id="btn">
+			        	<a href="shopping.html"><font color="white">加入购物车</font></a>
+			        </div>
+			        <div id="div3">
+			        	<a>扫一扫下单</a>
+			        	<div class="div1">
+			        		<img src="img/1474873648746.jpg">
+			        	</div>
+			        </div>
+			    </div>
+				
+			</div>
+		</div>
+		
+	
+	</body>
+	<script src="js/jquery-1.11.3.js"></script>
+	<!--选项卡js-->
+	<!--#all #body .div1 #List1-->
+	<script>
+		$("#all #body .div1").hover(function(){
+			$("#all #body .div1 #List1").show();
+		},function(){
+			$("#all #body .div1 #List1").hide();
+		})
+		
+//		#all #body .div1 #List1 #List2
+         $("#all #body .div1 #List1 ").hover(function(){
+         	$("#all #body .div1 #List1 #List2").show()
+         },function(){
+         	$("#all #body .div1 #List1 #List2").hide()
+         })
+         
+         $("#all #body .div1 #List1 ul .ESP").hover(function(){
+         	
+         	var index=$(this).index();
+         	$(this).addClass("select10").siblings().removeClass("select10");
+         	$("#all #body .div1 #List1 #List2 .contant").eq(index).show().siblings().hide();
+       	   $("#all #body .div1 #List1 #List2 .contant ul li").removeClass("select10");
+         })
+	</script>
+	<!--	放大镜js-->
+		<script>
+	    var warp=document.getElementsByClassName("warp")[0];
+	    var shade=document.getElementById("shade");
+		var oimg=document.getElementById("oImg");
+		var smdiv=document.getElementById("box");
+		var big = document.getElementsByClassName("big")[0];
+		var bigimg=big.getElementsByTagName("img")[0];
+		var list=$(".warp #div1 ul li")
+     			for(var i=0 ;i<list.length ;i++){
+   				list[i].onmouseover=function(){
+     					var osrc=this.getElementsByTagName("img")[0].src;
+  				   oimg.src=osrc;
+     				   var bigSrc = this.getElementsByTagName("img")[0].getAttribute("big-src");
+    				   bigimg.src=bigSrc; 
+      				}
+     			}
+			
+			
+			smdiv.onmousemove=function(ev){
+				shade.style.display="block";
+				big.style.display="block";
+				var ev=window.event||ev;
+				var clientX=ev.clientX;
+				var clientY=ev.clientY;
+				var redX=clientX+(document.documentElement.scrollLeft+document.body.scrollLeft)-48;
+				var yellowX=parseFloat(getStyleAttar(warp,"margin-left"));
+				var purX=shade.offsetWidth/2;
+				var blueX=redX-yellowX-purX;
+				var redY=clientY+(document.documentElement.scrollTop+document.body.scrollTop)-600;
+				var yellowY=parseFloat(getStyleAttar(warp,"margin-top"));
+				var purY=shade.offsetHeight/2;
+				var blueY=redY-yellowY-purY;
+				var maxX=parseFloat(getStyleAttar(smdiv,"width"))-shade.offsetWidth;
+				var maxY=parseFloat(getStyleAttar(smdiv,"height"))-shade.offsetHeight;
+				if(blueX<=0){
+					blueX=0
+				}
+				if(blueX>maxX){
+					blueX=maxX;
+				}
+				if(blueY<=0){
+					blueY=0
+				}
+				if(blueY>maxY){
+					blueY=maxY;
+				}
+				
+				var offsetX=-(blueX*bigimg.offsetWidth/parseFloat(getStyleAttar(smdiv,"width")))+"px";
+				var offsetY=-(blueY*bigimg.offsetHeight/parseFloat(getStyleAttar(smdiv,"height")))+"px";
+				shade.style.left=blueX+"px";
+				shade.style.top=blueY+"px";
+				bigimg.style.left=offsetX;
+				bigimg.style.top=offsetY;	
+			}
+		smdiv.onmouseout=function(){
+				shade.style.display="none";
+				big.style.display="none";
+			}	
+			
+		function getStyleAttar(obj, attr) {
+        if (obj.currentStyle) {
+            return obj.currentStyle[attr];
+        } else {
+            return window.getComputedStyle(obj)[attr];
+        }
+    }
+		</script>
+
+	<script src="js/jquery-1.11.3.js"></script>
+<!--	//数量小计js-->
+	<script>
+	 $("#right #div1 ul li").eq(2).click(function(){
+	 	 var $value=$("#right #div1 ul li").eq(1).html()*1
+	 	 $value++;
+	 	 $("#right #div1 ul li").eq(1).html($value);
+	 	
+	 })
+	  $("#right #div1 ul li").eq(0).click(function(){
+	  	var $value=$("#right #div1 ul li").eq(1).html()*1;
+	  	if($value>1){
+	 	 $value--;
+	 	 }
+	 	 $("#right #div1 ul li").eq(1).html($value);
+	  })
+	    $("#right #div3").click(function(){
+	    	$("#right #div3 .div1").css({"display":"block"})
+	    })
+	</script>
+	
+	<!--点击购物车js-->
+	<script src="js/cookie.js"></script>
+
+<script>
+
+    $("#right #div2").eq(0).click(function(){
+    	var _goodsId = window.location.href.split("?")[1].split("=")[1];
+        var _goodsName = window.location.href.split("?")[1].split("=")[1];
+        var _goodsDesc = $("#right .select1 a").html();
+        var _goodsPic = "10347145_1_pic270_4018.jpg";
+        var _goodsNum = $("#right #div1 ul li").eq(1).html()*1;
+        var _goodsPrice = $("#right .select2 a").html();
+        //检查商品是否存在
+        var goodsId = getCookie("goodsid_" + _goodsId);
+        if (goodsId) {
+            var num = getCookie("goodsNum_" + _goodsId) * 1;
+            _goodsNum += num;
+        }
+//        编码enCodeURI()
+//         解码deCodeURI   
+        setCookie("goodsid_" + _goodsId, _goodsId, 7);
+        setCookie("goodsName_" + _goodsId, _goodsName, 7);
+        setCookie("goodsDesc_" + _goodsId, _goodsDesc, 7);                                 
+        setCookie("goodsPic_" + _goodsId, _goodsPic, 7);
+        setCookie("goodsNum_" + _goodsId, _goodsNum, 7);
+        setCookie("goodsPrice_" + _goodsId, _goodsPrice, 7);
+    })
+
+    function setCookie(key, value, days, flag) {
+        var date = new Date();
+        date.setDate(date.getDate() + days);
+        if (flag) {
+            document.cookie = key + "=" + encodeURI(value) + ";expires=" + date + ";path=/";
+        } else {
+            document.cookie = key + "=" + encodeURI(value)  + ";expires=" + date;
+        }
+
+    }
+    function getCookie(key) {
+        var cookies = decodeURI(document.cookie);
+        //解析字符串"name=abc; names=hello"
+        var cookieList = cookies.split(";");//["name=abc","names=hello"];
+        for (var i = 0; i < cookieList.length; i++) {
+            var str = cookieList[i];  //"name=abc"    "names=hello"
+            var list = str.split("=");//["name","abc"]  ["names","hello"]
+            var Key = list[0].replace(" ", "");
+            var Value = list[1];
+            if (Key == key) {
+                return Value;
+            }
+        }
+    }
+
+
+</script>
+
+	
+	
+</html>
+		
+</html>

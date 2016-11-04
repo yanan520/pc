@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		   *{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #E2F2FF;
+			}
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+			#all{
+				position: relative;
+				width: 1000px;
+				height: 100%;
+				margin: 0 auto;
+			    background: #E2F2FF;;
+			}
+			#all .div1{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100px;
+				width: 100px;
+			}
+			#all .div1 img{
+				width: 100%;
+				height: 100%;
+			}
+			#all .div2{
+				position: absolute;
+				top: 120px;
+				left: 0;
+				width: 1000px;
+				height: 2px;
+				background: green;
+			}
+			#all .div3{
+				position: absolute;
+				top: 150px;
+				left: 0px;
+				width: 400px;
+				height: 500px;
+				border: 2px solid #CCCCCC;
+				background: #E5E5E5;
+				
+			}
+			#all .div3 span.select1{
+				display: block;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				width: 80px;
+				height: 50px;
+			}
+			#all .div3 span.select2{
+				display: block;
+				position: absolute;
+				top: 10px;
+				right:90px;
+				width: 160px;
+				height: 40px;
+			}
+			#all .div3 input.select3{
+				display: block;
+				position: absolute;
+				top: 40px;
+				left: 10px;
+				width: 300px;
+				height: 30px;
+			}
+			#all .div3 #div3{
+				display: none;
+				position: absolute;
+				top: 75px;
+				left: 10px;
+				width: 300px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				background:#A7CBFF;
+			}
+			#all .div3 input.select4{
+				display: block;
+				position: absolute;
+				top: 100px;
+				left: 10px;
+				width: 300px;
+				height: 30px;
+			}
+			#all .div3 #div4{
+				display: none;
+				position: absolute;
+				top: 135px;
+				left: 10px;
+				width: 300px;
+				height: 40px;
+				background:#A7CBFF;
+			}
+			#all .div3 input.select5{
+				display: block;
+				position: absolute;
+				top: 180px;
+				left: 10px;
+				width: 300px;
+				height: 30px;
+			}
+			#all .div3 #div5{
+				display: none;
+				position: absolute;
+				top: 210px;
+				left: 10px;
+				width: 300px;
+				height: 30px;
+				background:#A7CBFF;
+			}
+			#all .div3 input.select6{
+				display: block;
+				position: absolute;
+				top: 250px;
+				left: 10px;
+				width: 300px;
+				height: 30px;
+			}
+			#all .div3 #div6{
+				display: none;
+				position: absolute;
+				top: 286px;
+				left: 10px;
+				width: 150px;
+				height: 30px;
+			     background:#A7CBFF;
+			}
+			#all .div3 input.select7{
+				display: block;
+				position: absolute;
+				top: 320px;
+				left: 10px;
+				width: 130px;
+				height: 40px;
+			}
+			#all .div3 #div7{
+				display: none;
+				position: absolute;
+				top: 370px;
+				left: 10px;
+				width: 300px;
+				height: 30px;
+				background:#A7CBFF;
+			}
+			#all .div3 input.select8{
+				display: block;
+				position: absolute;
+				top: 320px;
+				right: 90px;
+				width: 100px;
+				height: 40px;
+			}
+			#all .div3 span.select9 {
+				display: block;
+				position: absolute;
+				top: 290px;
+				right: 90px;
+				width: 100px;
+				height: 30px;
+				}
+		    #all .div3 span.select10{
+		    	display: block;
+		    	position: absolute;
+		    	bottom: 10px;
+		    	left: 10px;
+		    	width: 200px;
+		    	height: 50px;
+		    	text-align: center;
+		    	line-height: 50px;
+		    	background: #2D8800;
+		    }
+		    #all .div4{
+		     	position: absolute;
+		     	left: 400px;
+		     	width: 400px;
+		     	height: 500px;
+		     	top: 150px;
+		     	background: red;
+		    }
+		    #all .div4 img{
+		    	width: 400px;
+		    	height: 500px;
+		    }
+		    #all #foot{
+				position: absolute;
+				top: 680px;
+				width: 800px;
+				height: 250px;
+				background: #E2F2FF;
+			}
+			#all #foot .div1{
+				position: absolute;
+				left: 100px;
+				width: 600px;
+				height: 200px;
+			}
+			#all #foot .div1 ul{
+				list-style: none;
+			}
+			#all #foot .div1 ul li{
+				width: 600px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div class="div1">
+				<img src="img/20160706010125330.png">
+			</div>
+			<div class="div2"></div>
+			<div class="div3">
+				<span class="select1">注册我买网</span>
+				<span class="select2">已有我买网账号？<a href="loged.html"><font color="lawngreen">登录</font></a></span>
+				<input class="select3" placeholder="邮箱/手机"/>
+				<div id="div3">1</div>
+				<input class="select4" placeholder="用户名"/>
+				<div id="div4">2</div>
+				<input class="select5" placeholder="密码" type="password"/>
+				<div id="div5">3</div>
+				<input class="select6" placeholder="确认密码" type="password"/>
+				<div id="div6">4</div>
+				<input class="select7" placeholder="验证码"/>
+				<div id="div7">5</div>
+				<input class="select8" placeholder="2WWE"/>
+				<span class="select9"><a href="#">看不清换一张</a></span>
+				<span class="select10"><font color="white"><a href="#">同意并注册</a></font></span>
+			</div>
+			<div class="div4">
+				<img src="img/20140603061354771.jpg">
+			</div>
+			<div id="foot">
+				<div class="div1">
+		    			<ul>
+		    				<li>Copyright@2009-2016 我买网上购物 All Rights Resevered 中粮海优有限公司</li>
+		    				<li>中粮海优有限公司 北京市朝阳区朝阳门南大街8号18F-09室</li>
+		    				<li>京公网安备 110101020000458 京ICP备 13003995号</li>
+		    				<li>营业执照 911100000555590239L 食品经营许可证：JY11105020028185</li>
+		    			</ul>
+		    		</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/cookie.js"></script>
+		<script>
+			$(".div3 .select10").click(function(){
+				var $tab=$(".div3 .select3").val()
+				var $psw=$(".div3 .select5").val()
+				setCookie("phone_"+$tab,$tab,100);
+				setCookie("pwd_"+$tab,$psw,100);
+			})
+			//手机验证
+			$(".div3 .select3").blur(function(){
+				var $value=$(".div3 .select3").val();
+				var reg1=/^1[34578]\d{9}$/
+				if(!(reg1.test($value))||$value.length!=11){
+					$(".div3 #div3").css({"display":"block"});
+					$(".div3 #div3").html("手机号有误")
+				}
+				else{
+					$(".div3 #div3").css({"display":"none"});
+				}
+			})
+			//用户名验证
+			$(".div3 .select4").blur(function(){
+				var $value1=$(".div3 .select4").val();
+				var reg2=/^[a-zA-Z]{1}[a-zA-Z0-9_]{3,16}$/
+				if(!(reg2.test($value1))){
+					$(".div3 #div4").css({"display":"block"});
+					$(".div3 #div4").html("用户名 首字母不能为数字 用户名有小写字母 数字 下划线组成")
+				}
+				else{
+					$(".div3 #div4").css({"display":"none"});
+				}
+			})
+			//密码验证
+			$(".div3 .select5").blur(function(){
+				var $value2=$(".div3 .select5").val();
+				var reg3=/^[0-9]{1}[0-9a-zA-Z]{7,15}$/
+				if(!(reg3.test($value2))){
+					$(".div3 #div5").css({"display":"block"});
+					$(".div3 #div5").html("密码必须长度8-16 首字母位数字")
+				}
+				else{
+					$(".div3 #div5").css({"display":"none"});
+				}
+			})
+			//确认密码
+			$(".div3 .select6").blur(function(){
+				var $value3=$(".div3 .select5").val();
+				var $value4=$(".div3 .select6").val();
+				if($value3!=$value4){
+					$(".div3 #div6").css({"display":"block"});
+					$(".div3 #div6").html("密码输入不一致")
+				}
+				else{
+					$(".div3 #div6").css({"display":"none"});
+				}
+			})
+			//验证码
+		var arr=[];
+		var str="";
+		for(var i=65;i<=90;i++)
+		{
+			arr.push(String.fromCharCode(i));
+		}
+		for(var j=97;j<=122;j++)
+		{
+			arr.push(String.fromCharCode(j));
+		}
+		for(var k=0;k<=9;k++)
+		{
+			arr.push(k);
+		}
+		fresh();
+		function fresh()
+		{
+			for(var i=0;i<=3;i++)
+			{
+				var num=Math.round(Math.random()*(arr.length-1));
+				str+=arr[num];
+			}
+			$(".div3 .select8").val(str);
+		}
+		$(".div3 .select9").click(function()
+		{
+			str="";
+			fresh();
+		})
+		$(".div3 .select7").blur(function(){
+			if($(".div3 .select7").val()!=$(".div3 .select8").val()){
+				$(".div3 #div7").css({"display":"block"});
+				$(".div3 #div7").html("验证码输入不一致")
+			}
+			else{
+				$(".div3 #div7").css({"display":"none"});
+			}
+		})
+		//登录
+		$(".div3 .select10").click(function(){
+	        if($(".div3 .select3").val()!="")
+		    window.location.href="loged.html";
+		
+		})
+
+		</script>
+		
+		<!--<input class="select3" placeholder="邮箱/手机"/>
+				<input class="select4" placeholder="用户名"/>
+				<input class="select5" placeholder="密码" type="password"/>
+				<input class="select6" placeholder="确认密码" type="password"/>
+				<input class="select7" placeholder="验证码"/>
+				<input class="select8" placeholder="2WWE"/>
+				<span class="select9"><a href="#">看不清换一张</a></span>-->
+				
+	
+	
+	
+        
+		
+	</body>
+</html>

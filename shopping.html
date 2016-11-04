@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="shopping.css"/>
+    <style>
+    	#head{
+    		position: relative;
+    		width: 1300px;
+    		height: 200px;
+    		background: #CDCDCD
+    	}
+    	#head #div1{
+				position: relative;
+				width: 1300px;
+				height: 100px;
+			}
+			#head #div1 img{
+				width: 100%;
+				height: 100%;
+			}
+			#head #div2{
+				width: 1300px;
+				height: 50px;
+				background-color: #BBBBBB;
+				position: relative;
+			}
+	/******/#head #div2 .div1{
+		  position: absolute;
+		  left: 30px;
+		  width: 50px;
+		  height: 40px;
+		  line-height: 48px;
+		  text-align: center;
+	}
+			
+			#head #div2 .div2{
+				position: absolute;
+				left: 250px;
+				width: 250px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			
+			#head #div2 .div3 ul li.esap .div4{
+				position: absolute;
+				z-index: 2;
+				left: 0;
+				bottom: -120px;
+				width: 200px;
+				height: 130px;
+				background:red;
+				opacity: 0.8;
+				display: none;
+				
+			}
+			#head #div2 .div3 ul li.esap .div4 ul{
+				list-style: none;
+			}
+			#head #div2 .div3 ul li.esap .div4 ul li{
+				float: left;
+				width: 90px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				
+			}
+			#head #div2 .div3 .div4 ul li a{
+				color: #AAAAAA;
+			}
+			
+			#head #div2 .div3{
+				position: absolute;
+				width: 1300px;
+				left:600px;
+				width: 800px;
+				height: 50px;
+			}
+ /* ******/	#head #div2 .div3 ul{
+				list-style: none;
+			}
+			#head #div2 .div3 ul li{
+				float: left;
+				width: 80px;
+				height: 50px;
+				text-align:center;
+				line-height: 50px;
+			}
+    	#bottom{
+    		position: relative;
+    		width: 1300px;
+    		height: 300px;
+    		background:#E2F2FF;
+    	}
+    	
+		#bottom .div1{
+				position: absolute;
+				left: 300px;
+				width: 600px;
+				height: 200px;
+			}
+		#bottom  .div1 ul{
+				list-style: none;
+			}
+		#bottom  .div1 ul li{
+				width: 600px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+    </style>
+</head>
+<body>
+	<div id="head">
+		<div id="div1">
+					<a href="#"><img src="img/1475027571108.jpg"></a>
+				</div>
+				<div id="div2">
+					<div class="div1">
+						<a href="index.html">首页</a>
+					</div>
+					<div class="div2">
+					hi,欢迎来我买网!&nbsp;<a href="loged.html">登录</a>&nbsp;<a href="reg.html">注册</a>
+					</div>
+					<div class="div3">
+						<ul>
+<!--******8*8**	-->			<li class="esap"><a href="#">我的账户</a></li>
+							<li><a href="shopping.html">购物车</a></li>
+							<li><a href="#">客户服务</a></li>
+							<li><a href="#">大客户</a></li>
+							<li><a href="#">B2B</a></li>
+							<li><a href="#">ICBC</a></li>
+							<li><a href="#">中信</a></li>
+						</ul>
+						
+					</div>
+				</div>
+	</div>
+<div class="catbox">
+    <table id="cartTable">
+        <thead>
+        <tr>
+            <th><label>
+                <input class="check-all check" type="checkbox"/>&nbsp;&nbsp;全选</label></th>
+            <th>商品</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <div class="foot" id="foot">
+        <label class="fl select-all"><input type="checkbox" class="check-all check"/>&nbsp;&nbsp;全选</label>
+        <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+        <div class="fr closing" id="money">结 算</div>
+        <input type="hidden" id="cartTotalPrice"/>
+        <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+        <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span
+                class="arrow up">︽</span><span class="arrow down">︾</span></div>
+        <div class="selected-view">
+            <div id="selectedViewList" class="clearfix">
+                <div><span>取消选择</span></div>
+            </div>
+            <span class="arrow">◆<span>◆</span></span></div>
+    </div>
+</div>
+<div id="bottom">
+	<div class="div1">
+		    			<ul>
+		    				<li>Copyright@2009-2016 我买网上购物 All Rights Resevered 中粮海优有限公司</li>
+		    				<li>中粮海优有限公司 北京市朝阳区朝阳门南大街8号18F-09室</li>
+		    				<li>京公网安备 110101020000458 京ICP备 13003995号</li>
+		    				<li>营业执照 911100000555590239L 食品经营许可证：JY11105020028185</li>
+		    			</ul>
+		    		</div>
+</div>
+</body>
+        <script src="js/find.js"></script>
+        <srcipt src="js/jquery-1.11.3.js"></srcipt>
+   
+       
+<script>
+    var parent = document.getElementsByTagName("table")[0].tBodies[0];
+    var str = document.cookie;
+    var list = [];
+    var char = "goodsid_";
+    for (var i = 0; i < str.length; i++) {
+        var index = str.indexOf(char, i);//0 开始找are index =1  2的位置开始找 index =7
+        if (index == i) {   //i就是char出现的位置
+            var starIndex = i + 8;
+            var endIndex = str.indexOf("=", starIndex);
+            var id = str.substring(starIndex, endIndex);
+            list.push(id)
+        }
+    }
+    var str = "";
+    var detailList = ["goodsid", "goodsName", "goodsDesc", "goodsPic", "goodsNum", "goodsPrice"];
+    for (var i = 0; i < list.length; i++) {
+        var id = list[i];
+        var tr = document.createElement("tr");
+        parent.appendChild(tr);
+        var td = document.createElement("td");
+        td.className = "checkbox";
+        td.innerHTML = "<input class='check-one check' type='checkbox'/>";
+        tr.appendChild(td);
+
+        var td = document.createElement("td");
+        td.className = "goods";
+        var img = document.createElement("img");
+        var pic = getCookie("goodsPic_" + id);
+        img.src = "img/" + pic;
+        td.appendChild(img);
+        var span = document.createElement("span");
+        var desc = getCookie("goodsDesc_" + id);
+        span.innerHTML = decodeURI(desc);
+        td.appendChild(span);
+        tr.appendChild(td);
+
+        var td = document.createElement("td");
+        td.className = "price";
+        td.innerHTML = (getCookie("goodsPrice_" + id) * 1).toFixed(2);
+        tr.appendChild(td);
+
+        var td = document.createElement("td");
+        td.className = "count";
+        var reduce = document.createElement("span");
+        if (getCookie("goodsNum_" + id) > 1) {
+            reduce.innerHTML = "-";
+        }
+        reduce.setAttribute("data-id", id);
+        reduce.className = "reduce";
+        td.appendChild(reduce);
+
+
+        var input = document.createElement("input");
+        input.className = "count-input";
+        input.type = "text";
+        input.value = getCookie("goodsNum_" + id);
+        td.appendChild(input);
+
+        var add = document.createElement("span");
+        add.className = "add";
+        add.innerHTML = "+";
+        add.setAttribute("data-id", id);
+        td.appendChild(add);
+        tr.appendChild(td);
+
+
+        var td = document.createElement("td");
+        td.className = "subtotal";
+        td.innerHTML = (getCookie("goodsPrice_" + id) * getCookie("goodsNum_" + id)).toFixed(2);
+        tr.appendChild(td);
+
+
+        var td = document.createElement("td");
+        td.className = "operation";
+        var span = document.createElement("span");
+        span.className = "delete";
+        span.innerHTML = "删除"
+        span.setAttribute("data-id", id);
+        td.appendChild(span);
+        tr.appendChild(td);
+
+        add.onclick = function () {
+            var countInput = findPre(this); //数量的文本框
+            var reduce = findPre(countInput);//减号
+            var price = findPre(this.parentNode);//单价
+            var subtotal = findNext(this.parentNode);//小计
+            reduce.innerHTML = "-";
+            var num = countInput.value * 1 + 1;
+            countInput.value = num;
+            subtotal.innerHTML = ( price.innerHTML * 1 * num).toFixed(2);  //单价乘以数量
+            total();
+            setCookie("goodsNum_" + this.getAttribute("data-id"), countInput.value, 7);
+        }
+
+        reduce.onclick = function () {
+            var countInput = findNext(this); //数量的文本框
+            var price = findPre(this.parentNode);//单价
+            var subtotal = findNext(this.parentNode);//小计
+            if (countInput.value > 1) {
+                var num = countInput.value * 1 - 1;
+                countInput.value = num;
+                subtotal.innerHTML = ( price.innerHTML * 1 * num).toFixed(2);
+                if (num == 1) {
+                    this.innerHTML = "";
+                }
+            } else {
+                return false;
+            }
+
+
+            setCookie("goodsNum_" + this.getAttribute("data-id"), countInput.value, 7);
+            total();
+        }
+    }
+
+
+    function setCookie(key, value, days, flag) {
+        var date = new Date();
+        date.setDate(date.getDate() + days);
+        if (flag) {
+            document.cookie = key + "=" + value + ";expires=" + date + ";path=/";
+        } else {
+            document.cookie = key + "=" + value + ";expires=" + date;
+        }
+
+    }
+    function getCookie(key) {
+        var cookies = document.cookie;
+        //解析字符串"name=abc; names=hello"
+        var cookieList = cookies.split(";");//["name=abc","names=hello"];
+        for (var i = 0; i < cookieList.length; i++) {
+            var str = cookieList[i];  //"name=abc"    "names=hello"
+            var list = str.split("=");//["name","abc"]  ["names","hello"]
+            var Key = list[0].replace(" ", "");
+            var Value = list[1];
+            if (Key == key) {
+                return Value;
+            }
+        }
+    }
+
+
+    var checkALL = document.getElementsByClassName("check-all")[0];
+    var checkList = document.getElementsByClassName("check-one");
+    checkALL.onclick = function () {
+        for (var i = 0; i < checkList.length; i++) {
+            checkList[i].checked = this.checked;
+        }
+
+        total();
+    };
+    for (var i = 0; i < checkList.length; i++) {
+        checkList[i].onclick = function () {
+            total();
+        }
+
+    }
+    function total() {
+        var totalNum = 0;
+        var totalPrice = 0;
+        for (var i = 0; i < checkList.length; i++) {
+            var checkOne = checkList[i];
+            if (checkOne.checked) {
+                //然后根据checknone 去找到数量 和 小计 然后把它们全部分别统计
+                //定位num标签
+                var tr = checkOne.parentNode.parentNode;
+                var numTd = tr.children[3];
+                var numInput = numTd.children[1];
+                var num = numInput.value * 1;
+                totalNum += num;  //求的是数量
+
+                var priceTd = tr.children[4];
+                var price = priceTd.innerHTML * 1;
+                totalPrice += price;
+            }
+        }
+        document.getElementById("selectedTotal").innerHTML = totalNum;
+        document.getElementById("priceTotal").innerHTML = totalPrice.toFixed(2);
+    }
+    var deleteList = document.getElementsByClassName("delete");
+    for (var i = 0; i < deleteList.length; i++) {
+        deleteList[i].onclick = function () {
+            var tr = this.parentNode.parentNode;
+            var trParent = tr.parentNode;
+            trParent.removeChild(tr);
+            total();
+            removeCookieById(this.getAttribute("data-id"));
+        }
+    }
+
+    function removeCookieById(id) {
+        var detailList = ["goodsid", "goodsName", "goodsDesc", "goodsPic", "goodsNum", "goodsPrice"];
+        for (var i = 0; i < detailList.length; i++) {
+            setCookie(detailList[i] + "_" + id, "", -1);
+        }
+    }
+</script>
+<!-- 删除cookies JS-->
+        <script>
+        document.getElementById("deleteAll").onclick=function(){
+        var detailList = ["goodsid", "goodsName", "goodsDesc", "goodsPic", "goodsNum", "goodsPrice"];
+        for (var i = 0; i < detailList.length; i++) {
+            setCookie(detailList[i] + "_" + id, "", -1);
+        }
+        var catbox=document.getElementsByClassName("catbox")[0]
+        var parent=catbox.parentNode;
+        parent.removeChild(catbox);
+        }
+        </script>
+</html>

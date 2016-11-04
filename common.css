@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.warp {
+    height: 600px;
+    width: 400px;
+    margin: 10px 10px;
+    position: relative;
+}
+
+.warp .small {
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.warp .small img {
+    height: 400px;
+    width: 400px;
+}
+
+.warp .small #shade {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: rgba(255, 180, 255, 0.6);
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.warp .big {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: 500px;
+    top: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.warp .big img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 800px;
+    width: 800px;
+}
+
+.warp .nav {
+    margin: 10px;
+    height: 100px;
+    width: 400px;
+    list-style: none;
+}
+
+.warp .nav li {
+    float: left;
+    width: 80px;
+    height: 100px;
+    margin-left: 18px;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #cdcdcd;
+}
+
+.warp .nav li img {
+    width: 80px;
+    height: 80px;
+    display: block;
+}

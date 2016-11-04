@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			html body{
+				width: 100%;
+				height: 100%;
+			}
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+			a:hover{
+				text-decoration: underline;
+				color: red;
+			}
+			#all{
+				margin: 0 auto;
+				width: 1300px;
+				height: 100%;
+				position: relative;
+			}
+			#all #rightLou{
+				position: fixed;
+				left: 20px;
+				bottom: 200px;
+			}
+			#rightLou ul{
+				list-style: none;
+			}
+			#rightLou ul li{
+				 height: 28px;
+                 width: 28px;
+                 position: relative;
+                 border: 1px dashed #c8c8c8;
+                 line-height: 28px;
+                 text-align: center;
+			}
+			#rightLou ul li span{
+				position: absolute;
+				display: none;
+				left: 0;
+                top: 0;
+                height: 28px;
+                width: 28px;
+                font-size: 12px;
+                 background-color: #ff0000;
+			}
+			#rightLou ul li:hover span{
+				display: block;
+				cursor: pointer;
+			}
+			#rightLou ul li span.selected{
+				display: block;
+			}
+			#head{
+				width: 1300px;
+				height: 350px;
+			}
+			#head #div1{
+				position: relative;
+				width: 1300px;
+				height: 100px;
+			}
+			#head #div1 img{
+				width: 100%;
+				height: 100%;
+			}
+			#head #div2{
+				width: 1300px;
+				height: 50px;
+				background-color: #BBBBBB;
+				position: relative;
+			}
+	/******/#head #div2 .div1{
+				position: absolute;
+				left: 50px;
+				width: 150px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			#head #div2 .div1 span{
+				position: absolute;
+				display: block;
+				bottom: -6px;
+				left: 10px;
+				width: 150px;
+				height: 40px;
+			}
+			#head #div2 .div2{
+				position: absolute;
+				left: 250px;
+				width: 250px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			
+			#head #div2 .div3 ul li.esap .div4{
+				position: absolute;
+				z-index: 2;
+				left: 0;
+				bottom: -120px;
+				width: 200px;
+				height: 130px;
+				background:red;
+				opacity: 0.8;
+				display: none;
+				
+			}
+			#head #div2 .div3 ul li.esap .div4 ul{
+				list-style: none;
+			}
+			#head #div2 .div3 ul li.esap .div4 ul li{
+				float: left;
+				width: 90px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				
+			}
+			#head #div2 .div3 .div4 ul li a{
+				color: #AAAAAA;
+			}
+			
+			#head #div2 .div3{
+				position: absolute;
+				width: 1300px;
+				left:600px;
+				width: 800px;
+				height: 50px;
+			}
+ /* ******/	#head #div2 .div3 ul{
+				list-style: none;
+			}
+			#head #div2 .div3 ul li{
+				float: left;
+				width: 80px;
+				height: 50px;
+				text-align:center;
+				line-height: 50px;
+			}
+			#head #div3{
+				width: 1300px;
+				height: 200px;
+				background-color: #E2F2FF;
+				position: absolute;
+			}
+			#head #div3 .div1{
+				position: absolute;
+				left: 50px;
+				top: 50px;
+				width: 150px;
+				height: 100px;
+			}
+			#head #div3 .div1 img{
+				width: 100%;
+				height: 100%;
+			}
+			#head #div3 .div2{
+				position: absolute;
+				left: 250px;
+				top: 50px;
+				width: 150px;
+				height: 100px;
+			}
+			#head #div3 .div2 img{
+				width: 100%;
+				height: 100%;
+			}
+			#head #div3 .div3{
+				position: absolute;
+				left: 500px;
+				top: 50px;
+				width: 420px;
+				height: 100px;
+			}
+			#head #div3 .div3 input{
+				display: block;
+				width: 280px;
+				height: 50px;
+				position: absolute;
+				border: 2px solid red;
+				left: 0;
+				top: 0;
+			}
+			#head #div3 .div3 span1{
+				display: block;
+				position: absolute;
+				left: 284px;
+				width: 50px;
+				height: 55px;
+				text-align: center;
+				line-height: 54px;
+				background: red;	
+			}
+			#head #div3 .div3 span1 a{
+				color: white;
+			}
+			#head #div3 .div3 .div4{
+				display: block;
+				position: absolute;
+				right: -80px;
+				top: 0;
+				width: 80px;
+				height: 54px;
+				text-align: center;
+				line-height: 50px;
+			}
+			#head #div3 .div3 .div5{
+				position: absolute;
+				left: -300px;
+				top: 54px;
+				width: 420px;
+				height: 40px;
+				
+			}
+			#head #div3 .div3 .div5 ul{
+				list-style: none;
+			}
+			#head #div3 .div3 .div5 ul li{
+				float: left;
+				width: 70px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+			}
+			#head #div3 .div3 .div5 ul li a{
+				color: #000000;
+			}
+			#head #div3 .div4{
+				position: absolute;
+				right: 100px;
+				top: 50px;
+				width: 150px;
+				height: 100px;
+			}
+			#head #div3 .div4 img{
+				width: 100%;
+				height: 100%;
+			}
+			
+			#body{
+				width: 1300px;
+				height: 100%;
+				position: relative;
+				background: #DDC18F;
+			}
+			#body #div1{
+				position: relative;
+				left: 0;
+				top: 0;
+				width: 1300px;
+				height: 50px;
+			}
+			#body #div1 .div1{
+				position: absolute;
+				left: 50px;
+				width: 200px;
+				height: 50px;
+				background: #098A00;
+				color: white;
+				text-align: center;
+				line-height: 50px;
+			}
+			#body #div1 .div2{
+				position: absolute;
+				left: 280px;
+				width: 720px;
+				height: 50px;
+				
+			}
+			#body #div1 .div2 ul{
+				list-style: none;
+			}
+			#body #div1 .div2 ul li{
+				float: left;
+				width: 70px;
+				height: 50px;
+				
+			}
+			#body #div1 .div3{
+				position: absolute;
+				right: 20px;
+				height: 50px;
+				width: 100px;
+				line-height: 50px;
+				text-align: center;
+				
+			}
+			#body #div2{
+				width: 1300px;
+				height: 400px;
+				position: relative;
+				overflow: hidden;
+				z-index: 0;
+			}
+               /*大轮播图css*/
+			#body #div2 #content{
+				list-style: none;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index:1;
+				
+			}
+			#body #div2 #content li{
+				float: left;
+				position: absolute;
+				left: 1300px;
+				width: 1300px;
+				height: 500px;
+			}
+			#body #div2 #content li.active{
+				left:0;
+				top: 0;
+			}
+			#body #div2 ul li img{
+				width: 100%;
+				height: 100%;
+			}
+			#body #div2 #list{
+				position: absolute;
+				bottom:20px;
+				left: 400px;
+				width: 600px;
+				height: 30px;
+				z-index: 3;
+			}
+			#body #div2 #list ul li{
+				list-style: none;
+			}
+			#body #div2 #list li{
+				list-style: none;
+				float: left;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				border-radius: 50%;
+				background:#7F7F7F;
+				opacity: 0.8;
+				margin-left: 30px;
+				
+			}
+			#body #div2 #list li.active1{
+				background:white;
+				
+			}
+			/*#all #body .div1 #List1{
+				position:absolute;
+				z-index: 2;
+				bottom: -450px;
+				width: 200px;
+				height: 450px;
+				background: #2D8800;
+				display: none;
+				background: red;
+			}
+			#all #body .div1 #List1 ul {
+				list-style: none;
+			}
+			#all #body .div1 #List1 ul li{
+				line-height: 40px;
+				text-align: center;
+				height: 40px;
+				width: 200px;
+			}
+			#all #body .div1 #List1 ul li.select10{
+				background: #CADEFF;
+			}
+			#all #body .div1 #List1 ul li a{
+				color: white;
+			}
+			#all #body .div1 #List1 #List2{
+				position: absolute;
+				z-index: 2;
+				top: 0px;
+				left: 200px;
+				width: 600px;
+				height: 500px;
+				background: greenyellow;
+				display: none;
+			}
+		#all #body .div1 #List1 #List2 .contant{
+			position: absolute;
+			z-index: 3;
+			top: 0;
+			left: 0;
+			width: 600px;
+			height: 500px;
+			border: 1px solid #BBBBBB;
+			background: #0000FF;
+			display: none;
+		}
+		#all #body .div1 #List1 #List2 .contant ul{
+			list-style: none;
+		}
+		#all #body .div1 #List1 #List2 .contant li{
+			width: 450px;
+			height: 40px;
+		}*/
+			/*选项卡css*/
+			#body #div3{
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				width: 200px;
+				height: 400px;
+				z-index: 2;
+				background: #2D8800;
+			
+			}
+			#body #div3 ul {
+				list-style: none;
+			}
+			#body #div3 ul li{
+				width: 200px;
+				height: 35px;
+			}
+			#body #div3 ul li.mag{
+				background-color:#CCCCCC;
+			}
+			#body #div3 ul li a{
+				color: white;
+			}
+			#body #div3 #div4{
+				position: absolute;
+				z-index: 2;
+				top: 0px;
+				left: 200px;
+				width: 650px;
+				height: 400px;
+				display: none;
+			}
+			#body #div3 #div4 .contant{
+				position: absolute;
+				left: 0px;
+				top: 0;
+				background-color: #2D8800;
+				opacity: 0.6;
+				width: 700px;
+				height: 400px;
+				display:block;
+			}
+			#body #div3 #div4 .contant ul{
+				list-style: none;
+			}
+			#body #div3 #div4 .contant ul li{
+				width: 600px;
+				height: 40px;
+			}
+			#body #div3 #div4 .contant ul li span{
+				border-left: 1px solid #B6B6B6;
+				
+			}
+			
+			#body #div5{
+				position: absolute;
+				z-index: 2;
+				top: 50px;
+				right: 50px;
+				width: 250px;
+				height: 400px;
+				background: #E5E5E5;
+			}
+			#body #div5 .div1{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 250px;
+				height: 40px;
+			}
+			#body #div5 .div1 ul{
+				list-style: none;
+			}
+			#body #div5 .div1 ul li{
+				float: left;
+				width: 80px;
+				height: 38px;
+				line-height: 38px;
+				text-align: center;
+				border: 1px solid #7F7F7F;
+				cursor: pointer;
+				background: #C8C8C8;
+			}
+			#body #div5 .contant{
+				position: absolute;
+				top: 38px;
+				width: 248px;
+				height: 100px;
+				display: none;
+				border: 1px solid #7F7F7F;
+			}
+			#body #div5 .div1 ul li.active3{
+				background:red;
+				border-bottom: 1px solid green;
+				}
+			#body #div5 .contant ul li{
+				width: 250px;
+				height: 32px;
+				line-height: 32px;
+				text-align: center;
+				list-style-position: inside;
+				}
+				
+			#body #div5 .div2{
+				position: absolute;
+				top: 140px;
+				left: 0;
+				width: 248px;
+				height: 180px;
+				border: 1px solid #7F7F7F;
+			}	
+			#body #div5 .div2 ul{
+				list-style: none;
+			}
+			#body #div5 .div2 ul li{
+				width: 80px;
+				height:58px;
+				float: left;
+			}
+			#body #div5 .div2 ul li img{
+				width:80px;
+				height:58px;
+			}
+			#body #div5 .div3{
+				position: absolute;
+				top: 320px;
+				width: 248px;
+				height: 78px;
+				border: 1px solid #7F7F7F;
+			}
+			#body #div5 .div3 img{
+				width: 248px;
+				height: 78px;
+			}
+			#body #div6{
+				position: absolute;
+				width: 1300px;
+				height: 350px;
+				background: #E5E5E5;
+			}
+			#body #div6 span{
+				display: block;
+				position: absolute;
+				top: -2px;
+				width: 1300px;
+				height: 50px;
+				line-height: 50px;
+				border-bottom: 2px solid green;
+				background: #F0F0F0;
+			}
+			#body #div6 span img{
+				margin-left: 100px;
+				
+				
+			}
+			#body #div6 .div1{
+				position: absolute;
+				left: 0;
+				top: 50px;
+				width: 300px;
+				height: 300px;
+			}
+			#body #div6 .div1 img{
+				width: 300px;
+				height: 300px;
+			}
+			#body #div6 .div2{
+				position: relative;
+				top: 50px;
+				left: 300px;
+				width: 1000px;
+				height: 300px;
+			
+			}
+			#body #div6 .div2 ul{
+				list-style: none;
+			}
+			#body #div6 .div2 ul li{
+				float: left;
+				width: 250px;
+				height: 300px;
+			}
+			#body #div6 .div2 ul li img{
+				display: block;
+				width: 248px;
+				height: 180px;
+				margin-top: 0;
+			}
+			#body #div6 .div2 ul li .div3{
+				position: absolute;
+				top: 180px;
+				width: 248px;
+				height: 120px;	
+			}
+			#body #div6 .div2 ul li .div3 span{
+				display: block;
+				position: absolute;
+				right: 15px;
+				top: 40px;
+				width: 60px;
+				height: 40px;
+				background: #FF5500;
+				line-height: 40px;
+				text-align: center;
+				border-radius: 4px;
+			}
+			#body #div7 {
+				position: relative;
+				width: 1300px;
+				height: 350px;
+				top: 350px;
+				background: #E2F2FF;
+			}
+			#body #div7 span{
+				display: block;
+				position: absolute;
+				top: -2px;
+				width: 1300px;
+				height: 50px;
+				line-height: 50px;
+				border-bottom: 2px solid green;
+				background: #F0F0F0;
+			}
+			#body #div7 span img{
+				margin-left: 100px;
+			}
+			#body #div7 .div1{
+				position: absolute;
+				left: 0;
+				top: 50px;
+				width: 300px;
+				height: 300px;
+			}
+			#body #div7 .div1 img{
+				width: 300px;
+				height: 300px;
+			}
+			#body #div7 .div2{
+				position: absolute;
+				top: 50px;
+				left: 300px;
+				width: 248px;
+				height: 148px;
+				border: 1px solid #E5E5E5;
+			}
+			#body #div7 .div2 img{
+				width: 248px;
+				height: 148px;
+			}
+			#body #div7 .div3{
+				position: absolute;
+				top: 50px;
+				left: 550px;
+				width: 248px;
+				height: 148px;
+				border: 1px solid #E5E5E5;
+			}
+			#body #div7 .div3 img{
+				width: 248px;
+				height: 148px;
+			}
+			#body #div7 .div4{
+				position: absolute;
+				top: 50px;
+				left: 800px;
+				width: 498px;
+				height: 148px;
+				border: 1px solid #E5E5E5;
+			}
+			#body #div7 .div4 img{
+				width: 498px;
+				height: 148px;
+			}
+			#body #div7 .div5{
+				position: absolute;
+				top: 200px;
+				left: 300px;
+				width: 498px;
+				height: 148px;
+				border: 1px solid #E5E5E5;
+			}
+			#body #div7 .div5 img{
+				width: 498px;
+				height: 148px;
+			}
+			#body #div7 .div6{
+				position: absolute;
+				top: 200px;
+				left: 800px;
+				width: 248px;
+				height: 148px;
+				border: 1px solid #E5E5E5;
+			}
+			#body #div7 .div6 img{
+				width: 248px;
+				height: 148px;
+			}
+			#body #div7 .div7{
+				position: absolute;
+				top: 200px;
+				left: 1050px;
+				width: 248px;
+				height: 148px;
+				border: 1px solid #E5E5E5;
+			}
+			#body #div7 .div7 img{
+				width: 248px;
+				height: 148px;
+			}
+			
+			
+			#body #div8{
+				position: relative;
+				width: 1300px;
+				height: 300px;
+				top: 350px;
+			}
+			#body #div8 span{
+				display: block;
+				position: absolute;
+				top: -2px;
+				width: 1300px;
+				height: 50px;
+				line-height: 50px;
+				border-bottom: 2px solid green;
+				background: #F0F0F0;
+			}
+			#body #div8 span img{
+				margin-left: 100px;
+			}
+			#body #div8 .div1{
+				position: absolute;
+				left: 0;
+				top: 50px;
+				width: 1300px;
+				height: 300px;
+			}
+			#body #div8 .div1 ul{
+				list-style: none;
+			}
+			#body #div8 .div1 ul li{
+				float: left;
+				width:325px;
+				height: 300px;
+			}
+			#body #div8 .div1 ul li img{
+				width:325px;
+				height: 300px;
+			}
+			
+			     /*楼层css*/
+			#all #lou{
+				position: relative;
+				width: 1300px;
+				top: 400px;
+				background: #F0F0F0;
+				height: 1000px;
+			}
+			#lou .div1{
+				width: 1300px;
+				height: 100px;
+			}
+			#lou .div1 ul{
+				list-style: none;
+			}
+			#lou .div1 ul li {
+				float: left;
+				width: 433px;
+				height: 100px;
+			}
+			#lou .div1 ul li img{
+				width: 433px;
+				height: 100px;
+			}
+			#lou #list1{
+				position: absolute;
+				width: 1300px;
+				height: 550px;
+				border: 1px solid #E5E5E5;
+			}
+			#lou #list1 .div1{
+				position: absolute;
+				top: 50px;
+				width:300px;
+				height: 200px;
+				background: #A7CBFF;
+			}
+			#lou #list1 .div1 span{
+				display: block;
+				position: absolute;
+				top: -50px;
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			#lou #list1 .div1 span a{
+				color: #A7CBFF;
+			}
+			#lou #list1 .div1 ul{
+				list-style: none;
+			}
+			#lou #list1 .div1 ul li{
+				float: left;
+				width: 130px;
+				height: 50px;
+			  margin-top: 20px;
+			  margin-left: 20px;
+			}
+			#lou #list1 .div2{
+				position: absolute;
+				top: 250px;
+				width: 300px;
+				height: 300px;
+			}
+			#lou #list1 .div2 img{
+				width: 300px;
+				height: 300px;
+			}
+			#lou #list1 .list{
+				position: absolute;
+				left: 350px;
+				width: 200px;
+			}
+			#lou #list1 .list ul{
+				list-style: none;
+			}
+			#lou #list1 .list ul li{
+				float: left;
+				width: 100px;
+				height: 48px;
+				line-height: 48px;
+				text-align:center;
+			}
+			#lou #list1 .list ul li.active5{
+				border-bottom: 2px solid red;
+			}
+			#lou #list1 .box{
+				position: absolute;
+				top: 50px;
+				left: 300px;
+				width: 1000px;
+				height: 500px;
+				border: 1px solid #A7CBFF;
+			}
+			#lou #list1 .box #div1{
+				position: absolute;
+				width: 1000px;
+				height: 250px;
+			}
+			#lou #list1 .box #div2{
+				position: absolute;
+				top: 250px;
+				width: 1000px;
+				height: 250px;
+			}
+			
+			#lou #list1 .box #div1 ul{
+				list-style: none;
+			}
+			#lou #list1 .box #div1 ul li{
+				float: left;
+				width: 248px;
+				height: 240px;
+				border: 1px solid #EAEAEA;	
+				display: block;
+			}
+			#lou #list1 .box #div1 ul li img{
+				display: block;
+				position: absolute;
+				top: 0;
+				width: 248px;
+				height: 170px;
+			}
+			#lou #list1 .box #div1  ul li .div1{
+				position: absolute;
+			    top:170px;
+				width: 248px;
+				height: 80px;
+			}
+			
+			#lou #list1 .box #div2 ul{
+				list-style: none;
+			}
+			#lou #list1 .box #div2 ul li{
+				float: left;
+				width: 248px;
+				height: 240px;
+				border: 1px solid #EAEAEA;
+				display: block;
+			}
+			#lou #list1 .box #div2 ul li img{
+				display: block;
+				position: absolute;
+				top: 0;
+				width: 248px;
+				height: 170px;
+			}
+			#lou #list1 .box #div2  ul li .div1{
+				position: absolute;
+			    top:170px;
+				width: 248px;
+				height: 80px;
+			}
+			
+			/*2楼css*/
+			#lou #list2{
+				position: absolute;
+			    top: 650px;
+				width: 1300px;
+				height: 550px;
+				border: 1px solid #E5E5E5;
+			}
+			#lou #list2 .div1{
+				position: absolute;
+				top: 50px;
+				width:300px;
+				height: 200px;
+				background: #A7CBFF;
+			}
+			#lou #list2 .div1 span{
+				display: block;
+				position: absolute;
+				top: -50px;
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			#lou #list2 .div1 span a{
+				color: #A7CBFF;
+			}
+			#lou #list2 .div1 ul{
+				list-style: none;
+			}
+			#lou #list2 .div1 ul li{
+				float: left;
+				width: 130px;
+				height: 50px;
+			  margin-top: 20px;
+			  margin-left: 20px;
+			}
+			#lou #list2 .div2{
+				position: absolute;
+				top: 250px;
+				width: 300px;
+				height: 300px;
+			}
+			#lou #list2 .div2 img{
+				width: 300px;
+				height: 300px;
+			}
+			#lou #list2 .list{
+				position: absolute;
+				left: 350px;
+				width: 200px;
+			}
+			#lou #list2 .list ul{
+				list-style: none;
+			}
+			#lou #list2 .list ul li{
+				float: left;
+				width: 100px;
+				height: 48px;
+				line-height: 48px;
+				text-align:center;
+			}
+			#lou #list2 .list ul li.active6{
+				border-bottom: 2px solid red;
+			}
+			#lou #list2 .box{
+				position: absolute;
+				top: 50px;
+				left: 300px;
+				width: 1000px;
+				height: 500px;
+				border: 1px solid #A7CBFF;
+			}
+			#lou #list2 .box #div1{
+				position: absolute;
+				width: 1000px;
+				height: 250px;
+			}
+			#lou #list2 .box #div2{
+				position: absolute;
+				top: 250px;
+				width: 1000px;
+				height: 250px;
+			}
+			
+			#lou #list2 .box #div1 ul{
+				list-style: none;
+			}
+			#lou #list2 .box #div1 ul li{
+				float: left;
+				width: 248px;
+				height: 240px;
+				border: 1px solid #EAEAEA;	
+				display: block;
+			}
+			#lou #list2 .box #div1 ul li img{
+				display: block;
+				position: absolute;
+				top: 0;
+				width: 248px;
+				height: 170px;
+			}
+			#lou #list2 .box #div1  ul li .div1{
+				position: absolute;
+			    top:170px;
+				width: 248px;
+				height: 80px;
+			}
+			
+			#lou #list2 .box #div2 ul{
+				list-style: none;
+			}
+			#lou #list2 .box #div2 ul li{
+				float: left;
+				width: 248px;
+				height: 240px;
+				border: 1px solid #EAEAEA;
+				display: block;
+			}
+			#lou #list2 .box #div2 ul li img{
+				display: block;
+				position: absolute;
+				top: 0;
+				width: 248px;
+				height: 170px;
+			}
+			#lou #list2 .box #div2  ul li .div1{
+				position: absolute;
+			    top:170px;
+				width: 248px;
+				height: 80px;
+			}
+			
+		/*	3楼**/
+		#lou #list3{
+				position: absolute;
+				top: 1250px;
+				width: 1300px;
+				height: 500px;
+				border: 1px solid #E5E5E5;
+				background:#A7CBFF;
+			}
+		#lou #list3 .div1{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 300px;
+			height: 200px;
+		}
+		#lou #list3 .div1 span{
+			display: block;
+			position: absolute;
+			top: -50px;
+			width: 100px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+		#lou #list3 .div1 span a{
+				color: #A7CBFF;
+		}
+		#lou #list3 .div1 ul{
+				list-style: none;
+		}
+		#lou #list3 .div1 ul li{
+				float: left;
+				width: 130px;
+				height: 50px;
+			  margin-top: 20px;
+			  margin-left: 20px;
+		}
+		#lou #list3 .div2{
+				position: absolute;
+				top: 250px;
+				width: 300px;
+				height: 250px;
+			}
+			#lou #list3 .div2 img{
+				width: 300px;
+				height: 250px;
+			}
+		#lou #list3 .list{
+				position: absolute;
+				top: -48px;
+				left: 350px;
+				width: 200px;
+			}
+			#lou #list3 .list ul{
+				list-style: none;
+			}
+			#lou #list3 .list ul li{
+				float: left;
+				width: 100px;
+				height: 46px;
+				line-height: 46px;
+				text-align:center;
+			}
+			#lou #list3 .list ul li.active7{
+				border-bottom: 2px solid red;
+			}
+			#lou #list3 .box{
+				position: absolute;
+				left: 300px;
+				width: 1000px;
+				height: 500px;
+			}
+			#lou #list3 .box .content3{
+				position: absolute;
+				width: 1000px;
+				height: 500px;
+			}
+			#lou #list3 .box .content3 .div1{
+				position: absolute;
+				top: 0;
+				width: 1000px;
+				height: 250px;
+				background: white;
+			}
+			#lou #list3 .box .content3 .div1 .list1{
+				position: absolute;
+				left: 0;
+				width: 250px;
+				height: 250px;
+			}
+			#lou #list3 .box .content3 .div1 .list1 img{
+				width: 250px;
+				height: 250px;
+			}
+			
+			#lou #list3 .box .content3 .div1 .list2{
+				position: absolute;
+				left: 250px;
+				width: 500px;
+				height: 250px;
+			}
+			
+			/*小轮播图*/
+			
+			#lou #list3 .box .content3 .div1 .list2 #content4{
+				list-style: none;
+				position:absolute;
+				overflow: hidden;
+				top: 0;
+				left: 0;
+				width:500px;
+				height:250px;
+				
+			}
+			#lou #list3 .box .content3 .div1 .list2 #content4 li{
+				position: absolute;
+				left: 500px;
+				width:490px;
+				height:240px;
+			}
+			#lou #list3 .box .content3 .div1 .list2 #content4 li.active8{
+				left: 0;
+				top: 0;
+			}
+			#lou #list3 .box .content3 .div1 .list2 #content4 li img{
+				width:100%;
+				height:100%;
+			} 
+			
+			#lou #list3 .box .content3 .div1 .list2 #nav{
+				position: absolute;
+				bottom: 20px;
+				left: 100px;
+				width: 200px;
+				height: 30px;
+				
+			}
+			#lou #list3 .box .content3 .div1 .list2 #nav li{
+				float: left;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background:#7F7F7F;
+				opacity: 0.8;
+				margin-left: 30px;
+				line-height: 30px;
+				text-align: center;
+			}
+			#lou #list3 .box .content3 .div1 .list2 #nav li.active9{
+				background:#DDC18F;
+			}
+			
+			#lou #list3 .box .content3 .div1 .list3{
+				position: absolute;
+				left: 750px;
+				width: 250px;
+				height: 250px;
+				background: red;
+			}
+			#lou #list3 .box .content3 .div1 .list3 img{
+				width: 100%;
+				height: 100%;
+			}
+			#lou #list3 .box .content3 .div1 .list4{
+				position: absolute;
+				left: 250px;
+				width: 250px;
+				height: 250px;
+			}
+			#lou #list3 .box .content3 .div1 .list4 img{
+				width: 100%;
+				height: 100%;
+			}
+			#lou #list3 .box .content3 .div1 .list5{
+				position: absolute;
+				left: 500px;
+				width: 250px;
+				height: 250px;
+			}
+			#lou #list3 .box .content3 .div1 .list5 img{
+				width: 100%;
+				height: 100%;
+			}
+			#lou #list3 .box .content3 .div1 .list6{
+				position: absolute;
+				left: 750px;
+				width: 250px;
+				height: 250px;
+			}
+			#lou #list3 .box .content3 .div1 .list6 img{
+				width: 100%;
+				height: 100%;
+			}
+			#lou #list3 .box .content3 .div2{
+				position: absolute;
+				top: 250px;
+				width: 1000px;
+				height: 250px;
+			}
+			#lou #list3 .box .content3 .div2 ul{
+				list-style: none;
+			}
+			#lou #list3 .box .content3 .div2 ul li{
+				float: left;
+				width: 248px;
+				height: 248px;
+				border: 1px solid #E5E5E5;
+			}
+			#lou #list3 .box .content3 .div2 ul li img{
+				width: 100%;
+				height: 100%;
+			}
+			
+			#all #foot{
+				position: relative;
+				top: 1150px;
+				width: 1300px;
+				height:600px;
+				border: 1px solid #A7CBFF;
+			}
+			#all #foot #div1{
+				position: absolute;
+				top: 0px;
+				width: 1300px;
+				height: 298px;
+				border-bottom: #2D8800 2px solid;
+				background: #E2F2FF;
+			}
+			
+			#all #foot #div1 .div1{
+				position: absolute;
+				left: 100px;
+				top: 50px;
+				width: 200px;
+				height: 200px;
+				border-right: 1px solid #C8C8C8;
+			}
+			#all #foot #div1 .div1 ul{
+				list-style: none;
+			}
+			#all #foot #div1 .div1 ul li{
+				line-height: 30px;
+				width: 200px;
+			}
+			
+			#all #foot #div1 .div2{
+				position: absolute;
+				left: 300px;
+				top: 50px;
+				width: 200px;
+				height: 200px;
+				border-right: 1px solid #C8C8C8;
+			}
+			#all #foot #div1 .div2 ul{
+				list-style: none;
+			}
+			#all #foot #div1 .div2 ul li{
+				line-height: 30px;
+				width: 200px;
+			}
+			
+			#all #foot #div1 .div3{
+				position: absolute;
+				left: 500px;
+				top: 50px;
+				width: 200px;
+				height: 200px;
+				border-right: 1px solid #C8C8C8;
+			}
+			#all #foot #div1 .div3 ul{
+				list-style: none;
+			}
+			#all #foot #div1 .div3 ul li{
+				line-height: 30px;
+				width: 200px;
+			}
+			
+			#all #foot #div1 .div4{
+				position: absolute;
+				left: 700px;
+				top: 50px;
+				width: 200px;
+				height: 200px;
+				border-right: 1px solid #C8C8C8;
+			}
+			#all #foot #div1 .div4 ul{
+				list-style: none;
+			}
+			#all #foot #div1 .div4 ul li{
+				line-height: 30px;
+				width: 200px;
+			}
+			#all #foot #div1 .div5{
+				position: absolute;
+				right: 50px;
+				top: 80px;
+				width:100px;
+				height: 100px;
+			}
+			#all #foot #div1 .div5 span{
+				display: block;
+				position: absolute;
+				top: -40px;
+				width: 100px;
+				height: 40px;
+				color: red;
+			}
+			#all #foot #div1 .div5 img{
+				width: 100%;
+				height: 100%;
+			}
+			#all #foot #div1 .div6{
+				position: absolute;
+				right: 180px;
+				top: 80px;
+				width:100px;
+				height: 100px;
+			}
+			#all #foot #div1 .div6 img{
+				width: 100%;
+				height: 100%;
+			}
+			#all #foot #div1 .div6 span{
+				display: block;
+				position: absolute;
+				top: -40px;
+				width: 100px;
+				height: 40px;
+				color: red;
+			}
+			
+			
+			#all #foot #div2{
+				position: absolute;
+				top: 300px;
+				width:1300px;
+				height: 300px;
+			}
+			#all #foot #div2 .div1{
+				position: absolute;
+				left: 100px;
+				top: 30px;
+				width:1000px;
+				height: 50px;
+			}
+			#all #foot #div2 .div1 ul{
+				list-style: none;
+			}
+			#all #foot #div2 .div1 ul li{
+				float: left;
+				width: 150px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				border-right: 1px solid #B6B6B6;
+			}
+			#all #foot #div2 .div2{
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				width: 150px;
+				height: 100px;
+			}
+			#all #foot #div2 .div2 img{
+				width: 100%;
+				height: 100%;
+			}
+			#all #foot #div2 .div3{
+				position: absolute;
+				top: 100px;
+				left: 250px;
+				width: 600px;
+			}
+			#all #foot #div2 .div3 ul{
+				list-style: none;
+			}
+			#all #foot #div2 .div3 ul li{
+				width: 600px;
+				height: 25px;
+				line-height: 25px;
+				text-align: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<!--<div id="rightLou">
+				<ul>
+					<li>1L
+					   <span>进口食品</span>
+					</li>
+					<li>2L
+					    <span>生鲜日配</span>
+					</li>
+					<li>3L
+						<span>时令果树</span>
+					</li>
+				</ul>
+			</div>-->
+			<div id="head">
+				<div id="div1">
+					<a href="#"><img src="img/1475027571108.jpg"></a>
+				</div>
+				<div id="div2">
+					<div class="div1">
+						当前城市:
+						<span >
+							<select id="province"></select>省
+                            <select id="city"></select>市
+						</span>
+					</div>
+					<div class="div2">
+					hi,欢迎来我买网!&nbsp;<a href="loged.html">登录</a>&nbsp;<a href="reg.html">注册</a>
+					</div>
+					<div class="div3">
+						<ul>
+<!--******8*8**	-->			<li class="esap"><a href="#">我的账户</a>
+	                            <div class="div4">
+							       <ul>
+								        <li><a href="#">代付款订单</a></li>
+								        <li><a href="#">我的消息</a></li>
+								        <li><a href="#">代签收订单</a></li>
+								        <li><a href="#">我的订单</a></li>
+								        <li><a href="#">支付卡账户</a></li>
+								        <li><a href="#">我的积分</a></li>
+								        <li><a href="#">优惠卷</a></li>
+								        <li><a href="#">我的收藏</a></li>
+							        </ul>
+						        </div>
+                            </li>
+							<li><a href="shopping.html">购物车</a></li>
+							<li><a href="#">客户服务</a></li>
+							<li><a href="#">大客户</a></li>
+							<li><a href="#">B2B</a></li>
+							<li><a href="#">ICBC</a></li>
+							<li><a href="#">中信</a></li>
+						</ul>
+						
+					</div>
+				</div>
+				<div id="div3">
+					<div class="div1">
+						<a href="#"><img src="img/1472640153727.png"></a>
+					</div>
+					<div class="div2">
+						<img src="img/1475049345059.jpg">
+					</div>
+					<div class="div3">
+						<input placeholder="        919就要酒  来就送5元  满100减100" />
+						<span1><a href="#">搜索</a></span>
+							<div class="div4">高级搜素</div>
+							<div class="div5">
+								<ul>
+									<li><a href="#">大闸蟹</a></li>
+									<li><a href="#">酒</a></li>
+									<li><a href="#">大米</a></li>
+									<li><a href="#">bigbang</a></li>
+									<li><a href="#">iphone7</a></li>
+								</ul>
+							</div>
+					</div>
+					<div class="div4">
+						<img src="img/1473142235649.jpg">
+					</div>
+				</div>
+			</div>
+			<div id="body">
+				<div id="div1">
+					<div class="div1">
+						全部商品分类
+					</div>
+					<div class="div2">
+						<ul>
+							<li><a href="#">团购</a></li>
+							<li><a href="#">大闸蟹</a></li>
+							<li><a href="#">试吃</a></li>
+							<li><a href="#">每日鲜</a></li>
+							<li><a href="#">我买酒</a></li>
+							<li><a href="#">我买自有</a></li>
+							<li><a href="#">中粮专区</a></li>
+							<li><a href="#">包邮直送</a></li>
+							<li><a href="#">我买海淘</a></li>
+						</ul>
+					</div>
+					<div class="div3">
+						<a href="shopping.html">购物车</a>
+					</div>
+					
+				</div>
+				<!--//大轮播图-->
+				<div id="div2">
+					<ul id="content">
+						<li class="active"><img src="img/1474598183452.jpg"></li>
+						<li><img src="img/1474873532538.jpg"></li>
+						<li><img src="img/1474942762206.jpg"></li>
+						<li><img src="img/1475131650325.jpg"></li>
+						<li><img src="img/1474963677778.jpg"></li>
+					</ul>
+					<!--#body #div2 #content li-->
+						<ul id="list">
+							<li class="active1">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>
+
+				</div>
+				
+	<!--##########-->
+				<div id="div3">
+					<ul >
+						<li class="ESP1"><a href="#">肉禽水产 水果蔬菜</a></li>
+						<li class="ESP1"><a href="#">进口生鲜 进口水果</a></li>
+						<li class="ESP1"><a href="#">进口食品 进口直采</a></li>
+						<li class="ESP1"><a href="#">酒 饮料/冲饮 茶</a></li>
+						<li class="ESP1"><a href="#">休闲食品 地方特产</a></li>
+						<li class="ESP1"><a href="#">营养健康 奶制品</a></li>
+						<li class="ESP1"><a href="#">粮油副食 调味干货</a></li>
+						<li class="ESP1"><a href="#">母婴食品 母婴用品</a></li>
+						<li class="ESP1"><a href="#">个人美妆 家用清洁</a></li>
+						<li class="ESP1"><a href="#">厨具家纺 家电3C</a></li>
+						<li class="ESP1"><a href="#">礼品礼券</a></li>
+					</ul>
+				    	<div id="div4">
+					<div class="contant">
+						<ul>
+							<li><b>精品水果</b>&nbsp;<span><a href="#">樱桃</a></span><span><a href="#">奇异果</a></span><span><a href="#">橙子</a></span><span><a href="#">苹果</a></span><span><a href="#">热带水果</a></span><span><a href="#">葡萄提子</a></span><span><a href="#">瓜</a></span><span><a href="#">芒果</a></span></li>
+							<li><b>海鲜水产</b>&nbsp;<span><a href="#">虾类</a></span><span><a href="#">鱼类</a></span><span><a href="#">贝类</a></span><span><a href="#">海鲜</a></span><span><a href="#">蟹类</a></span><span><a href="#">干货</a></span></li>
+							<li><b>生肉禽蛋</b>&nbsp;<span><a href="#">进口肉食</a></span><span><a href="#">羊肉</a></span><span><a href="#">牛肉</a></span><span><a href="#">猪肉</a></span><span><a href="#">畜肉</a></span><span><a href="#">蛋类</a></span></li>
+							<li><b>精品蔬菜</b>&nbsp;<span><a href="#">有机蔬菜</a></span><span><a href="#">精品蔬菜</a></span><span><a href="#">加工蔬菜</a></span><span><a href="#">冷冻蔬菜</a></span></li>
+							<li><b>低温饮品</b>&nbsp;<span><a href="#">鲜奶<a></span><span><a href="#">酸奶</a></span><span><a href="#">黄油乳酪</a></span><span><a href="#">低温果汁</a></span><span><a href="#">低温饮品</a></span></li>
+							<li><b>精选主食</b>&nbsp;<span><a href="#">饺子混沌</a></span><span><a href="#">包子馒头</a></span><span><a href="#">汤圆年糕</a></span><span><a href="#">西式糕点</a></span><span><a href="#">中式糕点</a></span></li>
+							<li><b>熟食/佐餐</b>&nbsp;<span><a href="#">配菜</a></span><span><a href="#">调味品</a></span><span><a href="#">火锅丸子</a></span><span><a href="#">熟肉肠类</a></span><span><a href="#">火腿</a></span></li>
+							<li><b>冰激凌</b>&nbsp;<span><a href="#">冰激凌</a></span><span><a href="#">雪糕</a></span><span><a href="#">冰棍</a></span></li>
+							<li><b>礼品礼券</b>&nbsp;<span><a href="#">肉类礼盒</a></span><span><a href="#">海鲜礼盒</a></span><span><a href="#"><span><a href="#">特色礼品</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口生鲜</b>&nbsp;<span><a href="#">进口海鲜</a></span><span><a href="#">进口牛肉</a></span><span><a href="#">进口猪肉</a></span><span><a href="#">进口羊肉</a></span></li>
+							<li><b>进口水果</b>&nbsp;<span><a href="#">车厘子</a></span><span><a href="#">奇异果</a></span><span><a href="#">榴莲</a></span><span><a href="#">进口橙子</a></span><span><a href="#">进口苹果</a></span><span><a href="#">火龙果</a></span></li>	
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>海外直采酒</b>&nbsp;<span><a href="#">进口直采洋酒</a></span><span><a href="#">进口直采啤酒</a></span><span><a href="#">进口直采葡萄酒</a></span></li>
+							<li><b>白酒/养生酒</b>&nbsp;<span><a href="#">精装低度酒</a></span><span><a href="#">简装高度酒</a></span><span><a href="#">简装低度酒</a></span><span><a href="#">整箱酒</a></span></li>
+							<li><b>葡萄酒</b>&nbsp;<span><a href="#">进口干红</a></span><span><a href="#">进口干白</a></span><span><a href="#">进口桃红</a></span><span><a href="#">国产干红</a></span></li>
+							<li><b>啤酒</b>&nbsp;<span><a href="#">整箱啤酒</a></span><span><a href="#">进口听装啤酒</a></span><span><a href="#">进口瓶装啤酒</a></span></li>
+							<li><b>洋酒</b>&nbsp;<span><a href="#">威士忌<a></span><span><a href="#">白兰地</a></span><span><a href="#">伏特加</a></span><span><a href="#">朗姆酒</a></span><span><a href="#">龙舌兰</a></span></li>
+							<li><b>水/饮料</b>&nbsp;<span><a href="#">包装饮用水</a></span><span><a href="#">功能饮料</a></span><span><a href="#">果蔬饮料</a></span></li>
+							<li><b>咖啡/冲调</b>&nbsp;<span><a href="#">咖啡</a></span><span><a href="#">奶茶</a></span><span><a href="#">蜂蜜</a></span><span><a href="#">果味冲调品</a></span><span><a href="#">其他冲调品</a></span></li>
+							<li><b>早餐谷物</b>&nbsp;<span><a href="#">谷物麦片</a></span><span><a href="#">成人奶粉</a></span><span><a href="#">芝麻糊</a></span></li>
+							<li><b>茶</b>&nbsp;<span><a href="#">绿茶</a></span><span><a href="#">铁观音</a></span><span><a href="#"><span><a href="#">普洱茶</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>海外直采酒</b>&nbsp;<span><a href="#">进口直采洋酒</a></span><span><a href="#">进口直采啤酒</a></span><span><a href="#">进口直采葡萄酒</a></span></li>
+							<li><b>白酒/养生酒</b>&nbsp;<span><a href="#">精装低度酒</a></span><span><a href="#">简装高度酒</a></span><span><a href="#">简装低度酒</a></span><span><a href="#">整箱酒</a></span></li>
+							<li><b>葡萄酒</b>&nbsp;<span><a href="#">进口干红</a></span><span><a href="#">进口干白</a></span><span><a href="#">进口桃红</a></span><span><a href="#">国产干红</a></span></li>
+							<li><b>啤酒</b>&nbsp;<span><a href="#">整箱啤酒</a></span><span><a href="#">进口听装啤酒</a></span><span><a href="#">进口瓶装啤酒</a></span></li>
+							<li><b>洋酒</b>&nbsp;<span><a href="#">威士忌<a></span><span><a href="#">白兰地</a></span><span><a href="#">伏特加</a></span><span><a href="#">朗姆酒</a></span><span><a href="#">龙舌兰</a></span></li>
+							<li><b>水/饮料</b>&nbsp;<span><a href="#">包装饮用水</a></span><span><a href="#">功能饮料</a></span><span><a href="#">果蔬饮料</a></span></li>
+							<li><b>咖啡/冲调</b>&nbsp;<span><a href="#">咖啡</a></span><span><a href="#">奶茶</a></span><span><a href="#">蜂蜜</a></span><span><a href="#">果味冲调品</a></span><span><a href="#">其他冲调品</a></span></li>
+							<li><b>早餐谷物</b>&nbsp;<span><a href="#">谷物麦片</a></span><span><a href="#">成人奶粉</a></span><span><a href="#">芝麻糊</a></span></li>
+							<li><b>茶</b>&nbsp;<span><a href="#">绿茶</a></span><span><a href="#">铁观音</a></span><span><a href="#"><span><a href="#">普洱茶</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>海外直采酒</b>&nbsp;<span><a href="#">进口直采洋酒</a></span><span><a href="#">进口直采啤酒</a></span><span><a href="#">进口直采葡萄酒</a></span></li>
+							<li><b>白酒/养生酒</b>&nbsp;<span><a href="#">精装低度酒</a></span><span><a href="#">简装高度酒</a></span><span><a href="#">简装低度酒</a></span><span><a href="#">整箱酒</a></span></li>
+							<li><b>葡萄酒</b>&nbsp;<span><a href="#">进口干红</a></span><span><a href="#">进口干白</a></span><span><a href="#">进口桃红</a></span><span><a href="#">国产干红</a></span></li>
+							<li><b>啤酒</b>&nbsp;<span><a href="#">整箱啤酒</a></span><span><a href="#">进口听装啤酒</a></span><span><a href="#">进口瓶装啤酒</a></span></li>
+							<li><b>洋酒</b>&nbsp;<span><a href="#">威士忌<a></span><span><a href="#">白兰地</a></span><span><a href="#">伏特加</a></span><span><a href="#">朗姆酒</a></span><span><a href="#">龙舌兰</a></span></li>
+							<li><b>水/饮料</b>&nbsp;<span><a href="#">包装饮用水</a></span><span><a href="#">功能饮料</a></span><span><a href="#">果蔬饮料</a></span></li>
+							<li><b>咖啡/冲调</b>&nbsp;<span><a href="#">咖啡</a></span><span><a href="#">奶茶</a></span><span><a href="#">蜂蜜</a></span><span><a href="#">果味冲调品</a></span><span><a href="#">其他冲调品</a></span></li>
+							<li><b>早餐谷物</b>&nbsp;<span><a href="#">谷物麦片</a></span><span><a href="#">成人奶粉</a></span><span><a href="#">芝麻糊</a></span></li>
+							<li><b>茶</b>&nbsp;<span><a href="#">绿茶</a></span><span><a href="#">铁观音</a></span><span><a href="#"><span><a href="#">普洱茶</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>海外直采酒</b>&nbsp;<span><a href="#">进口直采洋酒</a></span><span><a href="#">进口直采啤酒</a></span><span><a href="#">进口直采葡萄酒</a></span></li>
+							<li><b>白酒/养生酒</b>&nbsp;<span><a href="#">精装低度酒</a></span><span><a href="#">简装高度酒</a></span><span><a href="#">简装低度酒</a></span><span><a href="#">整箱酒</a></span></li>
+							<li><b>葡萄酒</b>&nbsp;<span><a href="#">进口干红</a></span><span><a href="#">进口干白</a></span><span><a href="#">进口桃红</a></span><span><a href="#">国产干红</a></span></li>
+							<li><b>啤酒</b>&nbsp;<span><a href="#">整箱啤酒</a></span><span><a href="#">进口听装啤酒</a></span><span><a href="#">进口瓶装啤酒</a></span></li>
+							<li><b>洋酒</b>&nbsp;<span><a href="#">威士忌<a></span><span><a href="#">白兰地</a></span><span><a href="#">伏特加</a></span><span><a href="#">朗姆酒</a></span><span><a href="#">龙舌兰</a></span></li>
+							<li><b>水/饮料</b>&nbsp;<span><a href="#">包装饮用水</a></span><span><a href="#">功能饮料</a></span><span><a href="#">果蔬饮料</a></span></li>
+							<li><b>咖啡/冲调</b>&nbsp;<span><a href="#">咖啡</a></span><span><a href="#">奶茶</a></span><span><a href="#">蜂蜜</a></span><span><a href="#">果味冲调品</a></span><span><a href="#">其他冲调品</a></span></li>
+							<li><b>早餐谷物</b>&nbsp;<span><a href="#">谷物麦片</a></span><span><a href="#">成人奶粉</a></span><span><a href="#">芝麻糊</a></span></li>
+							<li><b>茶</b>&nbsp;<span><a href="#">绿茶</a></span><span><a href="#">铁观音</a></span><span><a href="#"><span><a href="#">普洱茶</a></span><</li>
+						</ul>
+					</div>
+					<div class="contant">
+						<ul>
+							<li><b>进口牛奶/奶粉</b>&nbsp;<span><a href="#">进口牛奶</a></span><span><a href="#">进口成人奶粉</a></span><span><a href="#">进口酸奶饮料</a></span></li>
+							<li><b>进口饼干/糕点</b>&nbsp;<span><a href="#">进口威化</a></span><span><a href="#">进口曲奇</a></span><span><a href="#">进口巧克力</a></span><span><a href="#">进口糖果</a></span></li>
+							<li><b>进口零食</b>&nbsp;<span><a href="#">进口薯片/玉米片</a></span><span><a href="#">进口果冻布丁</a></span><span><a href="#">进口休闲食品</a></span><span><a href="#">进口果干</a></span></li>
+							<li><b>进口饮料/水</b>&nbsp;<span><a href="#">进口水</a></span><span><a href="#">进口果汁</a></span><span><a href="#">进口饮料</a></span></li>
+							<li><b>进口饮料冲调</b>&nbsp;<span><a href="#">进口早餐谷物<a></span><span><a href="#">进口咖啡</a></span><span><a href="#">进口奶茶</a></span></li>
+							<li><b>进口餐厨</b>&nbsp;<span><a href="#">进口米面</a></span><span><a href="#">进口方便面</a></span><span><a href="#">进口调味品</a></span></li>
+							<li><b>进口海外直采</b>&nbsp;<span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采牛奶</a></span><span><a href="#">进口直采糖果</a></span><span><a href="#">进口直采休闲零食</a></span><span><a href="#">进口直采饼干</a></span></li>
+							<li><b>进口酒</b>&nbsp;<span><a href="#">进口葡萄酒</a></span><span><a href="#">进口洋酒烈酒</a></span><span><a href="#">进口啤酒</a></span></li>
+							<li><b>跨境购</b>&nbsp;<span><a href="#">全球美食</a></span><span><a href="#">母婴童区</a></span><span><a href="#"><span><a href="#">家具日用</a></span><</li>
+						</ul>
+					</div>	
+				        </div>
+				</div>
+			
+			    <div id="div5">
+			    	<div class="div1">
+			    		<ul>
+			    			<li class="active3">服务公告</li>
+			    			<li>卡卷专栏</li>
+			    			<li>VIP通道</li>
+			    		</ul>
+			    	</div>
+			    	<div class="contant" style="display: block;">
+			    		<ul>
+			    			<li>10月意支付满40元随机</li>
+			    			<li>十一国庆放假直送</li>
+			    			<li>台风对物流时效延迟</li>
+			    		</ul>
+			    	</div>
+			    	<div class="contant">
+			    		<ul>
+			    			<li>我买卡简介</li>
+			    			<li>钱库优惠券使用小提示</li>
+			    			<li>折扣券使用说明</li>
+			    		</ul>
+			    	</div>
+			    	<div class="contant">
+			    		<ul>
+			    			<li>2016年4月VIP会员专享</li>
+			    			<li>2016年3月VIP会员专享</li>
+			    			<li>2016年2月VIP会员专享</li>
+			    		</ul>
+			    	</div>
+			    	<div class="div2">
+			    		<ul>
+			    			<li><a href="#"><img src="img/1460843971924.png"></a></li>
+			    			<li><a href="#"><img src="img/1460844014543.png"></a></li>
+			    			<li><a href="#"><img src="img/1460843971924.png"></a></li>
+			    			<li><a href="#"><img src="img/1460844055783.png"></a></li>
+			    			<li><a href="#"><img src="img/1460844077239.png"></a></li>
+			    			<li><a href="#"><img src="img/1460844091952.png"></a></li>
+			    			<li><a href="#"><img src="img/1460844104241.png"></a></li>
+			    			<li><a href="#"><img src="img/1460844118092.png"></a></li>
+			    			<li><a href="#"><img src="img/1460844131501.png"></a></li>
+			    		</ul>
+			    	</div>
+			    	<div class="div3">
+			    		<img src="img/1475220353889.jpg">
+			    	</div>
+			    	
+			    </div>
+			    
+			     <div id="div6">
+			     	<span><a href="#">每日劲爆品</a><img src="img/1468473925041.jpg"></span>
+			    	<div class="div1">
+			    		<img src="img/1475051000291.jpg">
+			    	</div>
+			    	<div class="div2">
+			    		<ul>
+			    			<li><img src="img/1475216192906.png">
+			    			<div class="div3">
+			    				<a href="demo2.html?id=0001">【自营】福临门葵花籽原香5L|营养好健康</a><br/><br/><font color="red" size="5">￥59.9</font><span><a href="#">去看看</a></span>
+			    			</div>
+			    			</li>
+			    			<li><img src="img/596278_1_pic270_7241.jpg">
+			    			<div class="div3">
+			    				<a href="demo3.html?id=002">【自营】福临门葵花籽原香5L|营养好健康</a><br/><br/><font color="red" size="5">￥120</font><span><a href="#">去看看</a></span>
+			    			</div>
+			    			</li>
+			    			<li><img src="img/596278_1_pic270_7241.jpg">
+			    			<div class="div3">
+			    				<a href="demo4.html?id=003">【自营】福临门葵花籽原香5L|营养好健康</a><br/><br/><font color="red" size="5">￥120</font><span><a href="#">去看看</a></span>
+			    			</div>
+			    			</li>
+			    			<li><img src="img/596278_1_pic270_7241.jpg">
+			    			<div class="div3">
+			    				<a href="#">【自营】福临门葵花籽原香5L|营养好健康</a><br/><br/><font color="red" size="5">￥120</font><span><a href="#">去看看</a></span>
+			    			</div>
+			    			</li>
+			    			
+			    		</ul>
+			    	</div>
+			    	
+			    </div>
+			    <div id="div7">
+			    	<span><a href="#">我买特色</a><img src="img/1468406837858.jpg"></span>
+			    	<div class="div1">
+			    		<a hhref="#"><img src="img/1471510839046.jpg"></a>
+			    	</div>
+			    	<div id="box">
+			    		<div class="div2">
+			    			<a hhref="#"><img src="img/1475115612133.jpg"></a>
+			    		</div>
+			    		<div class="div3">
+			    			<a hhref="#"><img src="img/1475032000355.jpg"></a>
+			    		</div>
+			    		<div class="div4">
+			    			<a hhref="#"><img src="img/1474969755358.jpg"></a>
+			    		</div>
+			    		<div class="div5">
+			    			<a hhref="#"><img src="img/1473674134209.jpg"></a>
+			    		</div>
+			    		<div class="div6">
+			    			<a hhref="#"><img src="img/1474342643162.jpg"></a>
+			    		</div>
+			    		<div class="div7">
+			    			<a hhref="#"><img src="img/1474949518705.jpg"></a>
+			    		</div>
+			    	</div>
+			    </div>
+			    <div id="div8">
+			    	<span><a href="#">我买推荐</a><img src="img/1468407138620.jpg"></span>
+			    	<div class="div1">
+			    	<ul>
+			    		<li><a href="#"><img src="img/1475142608454.jpg"></a></li>
+			    		<li><a href="#"><img src="img/1475212787118.jpg"></a></li>
+			    		<li><a href="#"><img src="img/1475220260358.jpg"></a></li>
+			    		<li><a href="#"><img src="img/1475215942144.jpg"></a></li>
+			    	</ul>
+			    	</div>
+			    </div>
+			</div>	
+			<div id="lou">
+				<div class="div1">
+					<ul>
+		             <li><a href="#"><img src="img/1475218089611.jpg"></a></li>
+		             <li><a href="#"><img src="img/1473676171897.jpg"></a></li>
+		             <li><a href="#"><img src="img/1475028188273.jpg"></a></li>
+					</ul>
+				</div>
+				<div id="list1">
+					<div class="div1">
+						<span><a href="#"><font color="red" size="5">1F</font> 进口食品</a></span>
+						<ul>
+							<li><a href="#">进口食品</a></li>
+							<li><a href="#">牛奶乳品</a></li>
+							<li><a href="#">坚果果干</a></li>
+							<li><a href="#">饮料及水</a></li>
+							<li><a href="#">饼干糕点</a></li>
+							<li><a href="#">进口餐厨</a></li>
+						</ul>
+					</div>
+					<div class="div2">
+						<img src="img/1468822662042.jpg">
+					</div>
+					<div class="list">
+						<ul>
+							<li class="active5">精选推荐</li>
+							<li>热卖推荐</li>
+						</ul>
+					</div>
+					<div class="box" style="display: none;">
+						<div id="div1">
+						<ul>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">1<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1467691543427.jpg">
+							<div class="div1">2<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/10407403_1_pic270_2270.jpg">
+							<div class="div1">3<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/10320623_1_pic270_8679.jpg">
+							<div class="div1">4<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+						</ul>
+						</div>
+						<div id="div2">
+						<ul>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">1<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">2<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">3<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">4<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+						</ul>
+						</div>
+						
+					</div>
+					<div class="box" >
+						<div id="div1">
+						<ul>
+							<li><img src="img/1474873648746.jpg">
+							<div class="div1">1<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li style="width: 498px;"><img src="img/1473649419853.jpg" style="width: 498px;">
+							<div class="div1" style="width: 498px;">2<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+						
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">4<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+						</ul>
+						</div>
+						<div id="div2">
+						<ul>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">1<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1471510839046.jpg">
+							<div class="div1">2<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/10347145_1_pic270_4018.jpg">
+							<div class="div1">3<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">4<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+						</ul>
+						</div>
+						
+					</div>
+				</div>
+				<div id="list2">
+					<div class="div1">
+						<span><a href="#"><font color="red" size="5">2F</font>生鲜日配</a></span>
+						<ul>
+							<li><a href="#">虾蟹类</a></li>
+							<li><a href="#">鱼类</a></li>
+							<li><a href="#">进口肉类</a></li>
+							<li><a href="#">国产肉类</a></li>
+							<li><a href="#">低温奶品</a></li>
+							<li><a href="#">精选主食</a></li>
+						</ul>
+					</div>
+					<div class="div2">
+						<img src="img/1473649419853.jpg">
+					</div>
+					<div class="list">
+						<ul>
+							<li class="active6">精选推荐</li>
+							<li>热卖推荐</li>
+						</ul>
+					</div>
+					<div class="box" style="display: none;">
+						<div id="div1">
+						<ul>
+							<li><img src="img/10255872_1_pic270_9909.jpg">
+							<div class="div1">1<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/10384135_1_pic270_4600.jpg">
+							<div class="div1">2<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/10448813_1_pic270_7199.jpg">
+							<div class="div1">3<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1467691543427.jpg">
+							<div class="div1">4<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+						</ul>
+						</div>
+						<div id="div2">
+						<ul>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">1<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/10444685_1_pic270_5185.jpg">
+							<div class="div1">2<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/10318317_1_pic270_5152.jpg">
+							<div class="div1">3<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1468546790742.jpg">
+							<div class="div1">4<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+						</ul>
+						</div>
+						
+						<!--#lou #list2 .box #div1 .div1 ul li #bigBox-->
+					</div>
+					<div class="box" >
+						<div id="div1">
+						<ul>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">1<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+				<li style="width: 498px;" class="esp">
+								<div id="bigBox">
+									<ul>
+		         						<li><img src="img/1472636736279.jpg" style="width: 498px;height: 248px;"></li>
+		         		
+									</ul>
+								</div>
+							
+							</li>
+						
+							<li><img src="img/1473837712666.jpg">
+							<div class="div1">4<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+						</ul>
+						</div>
+						<div id="div2">
+						<ul>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">1<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1468822662042.jpg">
+							<div class="div1">2<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1473649419853.jpg">
+							<div class="div1">3<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+							<li><img src="img/1468546790742.jpg">
+							<div class="div1">4<a href="#">【自营】COCA-COLA可口可乐</a><br/><font color="red" size="5">￥59</font></div>
+							</li>
+						</ul>
+						</div>
+						
+					</div>
+				</div>
+				<div id="list3">
+					<div class="div1">
+						<span><a href="#"><font color="red" size="5">3F</font>时令果蔬</a></span>
+						<ul>
+							<li><a href="#">苹果</a></li>
+							<li><a href="#">橙子</a></li>
+							<li><a href="#">直采水果</a></li>
+							<li><a href="#">进口水果</a></li>
+							<li><a href="#">国产水果</a></li>
+							<li><a href="#">精品蔬菜</a></li>
+						</ul>
+					</div>
+					<div class="div2">
+						<img src="img/1474873648746.jpg">
+					</div>
+<!--######-->			<div class="list">
+	<!--"#lou #list3 .list ul li-->
+						        <ul>
+							<li class="active7">精选推荐</li>
+							<li>热卖推荐</li>
+						        </ul>
+					    </div>
+					<div class="box">
+						<!--#lou #list3 .box .content3-->
+						<div class="content3">
+							<div class="div1">
+								    <div class="list1">
+									   <img src="img/1468566739309.jpg">
+								    </div>
+								    
+							        <div class="list2">
+				                        <ul id="content4">
+				                	        <li class="active8"><img src="img/1474446272599.jpg"></li>
+						                    <li><img src="img/1460844830679.png"></li>
+						                    <li><img src="img/1472636736279.jpg"></li>	
+				                        </ul>
+				                
+				                    <ul id="nav">
+							         <li class="active9">1</li>
+							         <li>2</li>
+							         <li>3</li>
+						            </ul>
+							        </div>
+							        
+								    <div class="list3">
+									    <img src="img/1467970694334.jpg">
+								    </div>
+								
+							</div>
+							<div class="div2">
+								<ul>
+									<li><img src="img/1460844830679.png"></li>
+									<li><img src="img/1467970694334.jpg"></li>
+									<li><img src="img/1460844814627.png"></li>
+									<li><img src="img/10407403_1_pic270_2270.jpg"></li>
+								</ul>
+								
+							</div>
+						</div>
+						<div class="content3" style="display: none;">
+							<div class="div1">
+								    <div class="list1">
+									   <img src="img/1468566739309.jpg">
+								    </div>
+								    
+							        <div class="list4">
+							        	<img src="img/1460844814627.png">
+							        </div>
+				                       
+							        
+								    <div class="list5">
+									    <img src="img/1467970694334.jpg">
+								    </div>
+								    <div class="list6">
+								    	<img src="img/1460844814627.png">
+								    </div>
+								
+							</div>
+							<div class="div2">
+								<ul>
+									<li><img src="img/1460844830679.png"></li>
+									<li><img src="img/1467970694334.jpg"></li>
+									<li><img src="img/1460844814627.png"></li>
+									<li><img src="img/10407403_1_pic270_2270.jpg"></li>
+								</ul>
+								
+							</div>
+						</div>
+						
+					</div>
+					
+					
+				</div>
+					
+			</div>
+		    
+		    <div id="foot">
+		    	<div id="div1">
+		    		<div class="div1">
+		    			<ul>
+		    				<li><a href="#"><font size="5">新手上路</font></a></li>
+		    				<li><a href="#">新用户演示</a></li>
+		    				<li><a href="#">会员积分计划</a></li>
+		    				<li><a href="#">会员等级规则</a></li>
+		    				<li><a href="#">售后服务政策</a></li>
+		    				<li><a href="#">我买完发票制度</a></li>
+		    			</ul>
+		    		</div>
+		    		<div class="div2">
+		    			<ul>
+		    				<li><a href="#"><font size="5">付款方式</font></a></li>
+		    				<li><a href="#">支付方式</a></li>
+		    				<li><a href="#">支付常见问题</a></li>
+		    				<li><a href="#">激活礼品卡</a></li>
+		    				<li><a href="#">我买卡</a></li>
+		    				<li><a href="#">电子礼品卡说明晃使用</a></li>
+		    			</ul>
+		    		</div>
+		    		<div class="div3">
+		    			<ul>
+		    				<li><a href="#"><font size="5">配送信息</font></a></li>
+		    				<li><a href="#">配送运费信息</a></li>
+		    				<li><a href="#">生鲜配送运费标准</a></li>
+		    				<li><a href="#">订单处理时间</a></li>
+		    				<li><a href="#">验货与拒收政策</a></li>
+		    				<li><a href="#">用券订单结算说明</a></li>
+		    			</ul>
+		    		</div>
+		    		<div class="div4">
+		    			<ul>
+		    				<li><a href="#"><font size="5">我买提示</font></a></li>
+		    				<li><a href="#">找回密码</a></li>
+		    				<li><a href="#">联系我们</a></li>
+		    				<li><a href="#">常见热点问题</a></li>
+		    				<li><a href="#">顾客意见</a></li>
+		    			</ul>
+		    		</div>
+		    		<div class="div5">
+		    			<span>我买网APP</span>
+		    			<img src="img/1460821684796.jpg">
+		    		</div>
+		    		<div class="div6">
+		    			<span>我买网微信</span>
+		    			<img src="img/1460533777294.jpg">
+		    		</div>
+		    	</div>
+		    	<div id="div2">
+		    		<div class="div1">
+		    			<ul>
+		    				<li><a href="#">关于我们</a></li>
+		    				<li><a href="#">免费条款</a></li>
+		    				<li><a href="#">中粮集团</a></li>
+		    				<li><a href="#">友情链接</a></li>
+		    				<li><a href="#">搜素热词</a></li>
+		    				<li style="width: 200px;"><a href="#">客服电话：400-005-5678</a></li>
+		    			</ul>
+		    		</div>
+		    		<div class="div2">
+		    			<img src="img/1460960199064.jpg">
+		    		</div>
+		    		<div class="div3">
+		    			<ul>
+		    				<li>Copyright@2009-2016 我买网上购物 All Rights Resevered 中粮海优有限公司</li>
+		    				<li>中粮海优有限公司 北京市朝阳区朝阳门南大街8号18F-09室</li>
+		    				<li>京公网安备 110101020000458 京ICP备 13003995号</li>
+		    				<li>营业执照 911100000555590239L 食品经营许可证：JY11105020028185</li>
+		    			</ul>
+		    		</div>
+		  
+		    	</div>
+		    </div>
+		</div>
+		
+	</body>
+	<script src="js/jquery-1.11.3.js"></script>
+	
+        <!--   省市联动js-->
+	<script>
+        var province = document.getElementById("province");
+        var city = document.getElementById("city");
+        var req = new XMLHttpRequest();
+            req.open("get", "mockData/city.json", true);
+            req.send();
+            req.onreadystatechange = function () {
+                if (req.readyState == 4) {
+                    if (req.status == 200) {
+                        var result = req.responseText;
+                // var list = eval("("+result+")");
+                        var list = JSON.parse(result);
+                        var html = "";
+                        for (var i in list) {
+                            var p = list[i]["p"];
+                            html += "<option>" + p + "</option>";
+                        }
+                province.innerHTML = html;
+            }
+        }
+    }
+
+
+    //选择省份找到对应的城市
+    province.onchange = function () {
+//        alert("改变了");
+        var value = this.value;
+        var req = new XMLHttpRequest();
+        req.open("get", "mockData/city.json", true);
+        req.send();
+        req.onreadystatechange = function () {
+            if (req.readyState == 4 && req.status == 200) {
+                var list = JSON.parse(req.responseText);
+                for (var i in list) {
+                    var p = list[i]["p"];//省
+                    if (p == value) {
+                        var cityList = list[i]["c"]; //city的集合
+                        var html = "";
+                        for (var k in cityList) {
+                            html += "<option>" + cityList[k]["c"] + "</option>";
+                        }
+                        city.innerHTML = html;
+                        break;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+</script>
+
+	
+	<!--//头部划过效果js-->
+	<script>
+		$("#head #div2 .div3 ul li").eq(0).hover(function(){
+			$("#head #div2 .div3 ul .esap .div4").eq(0).css({"display":"block"})
+		},function(){
+			$("#head #div2 .div3 ul .esap .div4").eq(0).css({"display":"none"})
+		})
+	</script>
+	
+	<!--//大轮播图js-->
+	<script>
+	var $index1=0;
+	var $before=$index1;
+	var $length1=$("#body #div2 #list li").length;
+	
+	var $timer=null;
+	startTimer();
+	//鼠标事件
+	$("#body #div2 #list li").mouseover(function(){
+		clearInterval($timer)
+		$index1=$(this).index();
+		show(false);	
+	}).mouseout(function(){
+		startTimer()
+	})
+	
+	function startTimer(){
+		$timer=setInterval(function(){
+			$index1++;
+			if($index1==$length1){
+				$index1=0;
+			} 
+
+			show(true);
+		},3000)
+	}
+	
+	function show(flag){
+            if(!flag){  //手动
+                if($before<$index1) {  //从左往右运动
+                    $("#body #div2 #content li").eq($before).stop().animate({"left": "-1300px"});
+                    $("#body #div2 #content li").eq($index1).css({"left": "1300px"}).animate({"left": "0"})
+                }
+                else if($before>$index1){  //从右往左运动
+                    $("#body #div2 #content li").eq($before).stop().animate({"left": "1300px"});
+                    $("#body #div2 #content li").eq($index1).css({"left": "-1300px"}).animate({"left": "0"})
+
+                }
+            }
+
+            else{   //自动播放
+                $("#body #div2 #content li").eq($before).stop().animate({"left": "-1300px"});
+                $("#body #div2 #content li").eq($index1).css({"left": "1300px"}).animate({"left": "0"})
+            }
+            $("#body #div2 #list li").eq($index1).addClass("active1").siblings().removeClass("active1");
+
+            $before=$index1;
+
+        }
+
+	</script>
+	
+	<!--//3楼小轮播图js-->
+	<script>
+	var $index2=0;
+	var $before2=$index2;
+	var $length2=$("#lou #list3 .box .content3 .div1 .list2 #nav li").length;
+	
+	var $timer2=null;
+	startTimer2();
+	//鼠标事件
+	$("#lou #list3 .box .content3 .div1 .list2 #nav li").mouseover(function(){
+		clearInterval($timer2)
+		$index2=$(this).index();
+		show2(false);	
+	}).mouseout(function(){
+		startTimer2()
+	})
+	
+	function startTimer2(){
+		$timer2=setInterval(function(){
+			$index2++;
+			if($index2==$length2){
+				$index2=0;
+			}
+
+			show2(true);
+		},3000)
+	}
+	
+	function show2(flag){
+            if(!flag){  //手动
+                if($before2<$index2) {  //从左往右运动
+                    $("#lou #list3 .box .content3 .div1 .list2 #content4 li").eq($before2).stop().animate({"left": "-500px"});
+                    $("#lou #list3 .box .content3 .div1 .list2 #content4 li").eq($index2).css({"left": "500px"}).animate({"left": "0"})
+                }
+                else if($before2>$index2){  //从右往左运动
+                    $("#lou #list3 .box .content3 .div1 .list2 #content4 li").eq($before2).stop().animate({"left": "500px"});
+                    $("#lou #list3 .box .content3 .div1 .list2 #content4 li").eq($index2).css({"left": "-500px"}).animate({"left": "0"})
+
+                }
+            }
+
+            else{   //自动播放
+                $("#lou #list3 .box .content3 .div1 .list2 #content4 li").eq($before2).stop().animate({"left": "-500px"});
+                $("#lou #list3 .box .content3 .div1 .list2 #content4 li").eq($index2).css({"left": "500px"}).animate({"left": "0"})
+            }
+            $("#lou #list3 .box .content3 .div1 .list2 #nav li").eq($index2).addClass("active9").siblings().removeClass("active9");
+
+            $before2=$index2;
+
+        }
+	
+	
+	
+	
+	
+		
+	</script>
+
+
+
+	<!--大选项卡 #body #div3 #div4-->
+	<script>
+		$("#body #div3").hover(function(){
+			$("#body #div3 #div4").show()
+		},function(){
+			$("#body #div3 #div4").hide()
+			$("#body #div3 ul .ESP1").removeClass("mag");
+		})
+		$("#body #div3 ul .ESP1").hover(function(){
+			var index=$(this).index();
+			$(this).addClass("mag").siblings().removeClass("mag");
+			$("#body #div3 #div4 .contant").eq(index).show().siblings().hide();
+			$("#body #div3 #div4 .contant ul li").removeClass("mag")
+		})
+	</script>
+	
+	
+	<!--//小选项卡js-->
+	<script>
+	var $liList1=$("#body #div5 .div1 ul li");
+	var $contant1=$("#body #div5 .contant");
+	var $length=$liList1.length;
+		$("#body #div5 .div1 ul li").hover(function(){
+			$(this).addClass("active3").siblings("").removeClass("active3");
+        	$contant1.eq($(this).index()).show().siblings(".contant").hide();
+        	
+		}
+	)
+	</script>
+	
+	<!--//1楼选项卡js-->
+	<script>
+	var $liList3=$("#lou #list1 .list ul li");
+	var $box3=$("#lou #list1 .box");
+	var $length3=$liList3.length;
+	for(var i=0;i<$length3;i++){
+		$liList3[i].index=i;
+		$liList3[i].onmousemove=function(){
+			$(this).addClass("active5").siblings().removeClass("active5");
+			$box3.eq($(this).index()).show().siblings(".box").hide();
+			
+		}
+	}
+		
+	</script>
+	
+	<!--//2楼选项卡js-->
+	<script>
+	var $liList4=$("#lou #list2 .list ul li");
+	var $box4=$("#lou #list2 .box");
+	var $length4=$liList4.length;
+	for(var i=0;i<$length4;i++){
+		$liList4[i].index=i;
+		$liList4[i].onmousemove=function(){
+			$(this).addClass("active6").siblings().removeClass("active6");
+			$box4.eq($(this).index()).show().siblings(".box").hide();
+			
+		}
+	}
+		
+	</script>
+	
+	<!--3楼选显卡-->
+	<script>
+		$("#lou #list3 .list ul li").hover(function(){
+			var index=$(this).index();
+			$(this).addClass("active7").siblings().removeClass("active7");
+			$("#lou #list3 .box .content3").eq(index).show().siblings().hide();
+		})
+		
+		
+	</script>
+	
+	
+	<!--<script>
+		$("#all #body .div1").hover(function(){
+			$("#all #body .div1 #List1").show();
+		},function(){
+			$("#all #body .div1 #List1").hide();
+		})
+		
+//		#all #body .div1 #List1 #List2
+         $("#all #body .div1 #List1 ").hover(function(){
+         	$("#all #body .div1 #List1 #List2").show()
+         },function(){
+         	$("#all #body .div1 #List1 #List2").hide()
+         })
+         
+         $("#all #body .div1 #List1 ul .ESP").hover(function(){
+         	
+         	var index=$(this).index();
+         	$(this).addClass("select10").siblings().removeClass("select10");
+         	$("#all #body .div1 #List1 #List2 .contant").eq(index).show().siblings().hide();
+       	   $("#all #body .div1 #List1 #List2 .contant ul li").removeClass("select10");
+         })
+	</script>-->
+	
+
+	
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+			#all{
+				position: relative;
+				width: 1000px;
+				height: 100%;
+				margin: 0 auto;
+			}
+			#all .div1{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100px;
+				width: 100px;
+			}
+			#all .div1 img{
+				width: 100%;
+				height: 100%;
+			}
+			#all .div2{
+				position: absolute;
+				top: 120px;
+				left: 0;
+				width: 1000px;
+				height: 2px;
+				background: green;
+			}
+			#all .div3{
+				position: absolute;
+				top: 150px;
+				left: 0px;
+				width: 400px;
+				height: 500px;
+			}
+			#all .div3 img{
+				width: 100%;
+				height: 100%;
+			}
+			#all .div4{
+				position: absolute;
+				top: 150px;
+				left: 500px;
+				width: 400px;
+				height: 500px;
+				border: 2px solid #AAAAAA;
+				background: #E2F2FF;
+			}
+			#all .div4 .div1{
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				width: 200px;
+				height: 50px;
+			}
+			#all .div4 input.select1{
+				display: block;
+				position: absolute;
+				top:70px ;
+				left: 10px;
+				width: 300px;
+				height: 50px;
+			}
+			#all .div4 input.select2{
+				display: block;
+				position: absolute;
+				top: 150px;
+				left: 10px;
+				width:300px;
+				height: 50px;
+			}
+			.div4 span.select4{
+				display: block;
+				position: absolute;
+				top:210px;
+				left: 10px;
+				width: 250px;
+				height: 50px;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 50px;
+				background: #2D8800;
+				cursor: pointer;
+			}
+			.div4 span.select5{
+				display: block;
+				position: absolute;
+				top:210px;
+				left: 270px;
+				width: 100px;
+				height: 50px;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 50px;
+				background:#CCCCCC;
+				cursor: pointer;
+			}
+			.div4 #list5{
+				position: absolute;
+				top: 270px;
+				left: 10px;
+				width: 350px;
+				height: 200px;
+			}
+			.div4 #list5 span{
+				display: block;
+				top: -5px;
+				width: 300px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				border-top: 1px dashed #C8C8C8;
+			}
+			.div4 #list5 ul{
+				list-style: none;
+				width: 320px;
+				height: 180px;
+			}
+			.div4 #list5 ul li{
+				float: left;
+				width: 80px;
+				height: 50px;
+				text-align: center;
+				cursor: pointer;
+			}
+			#all #foot{
+				position: absolute;
+				top: 680px;
+				width: 1000px;
+				height: 250px;
+				background: #E2F2FF;
+			}
+			#all #foot .div1{
+				position: absolute;
+				left: 100px;
+				width: 600px;
+				height: 200px;
+			}
+			#all #foot .div1 ul{
+				list-style: none;
+			}
+			#all #foot .div1 ul li{
+				width: 600px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div class="div1">
+				<img src="img/20160706010125330.png">
+			</div>
+			<div class="div2"></div>
+			<div class="div3">
+				<img src="img/20161008095400216.jpg">
+			</div>
+			<div class="div4">
+			    <div class="div1">
+		       <font size="3">请登录中粮我买网</font>
+		        </div>
+		        <input type="text" class="select1" placeholder="用户名/邮箱/手机号"/>
+		        <input class="select2" placeholder="密码" type="password"/>
+		        <span class="select4"><font color="white" size="4">登录</font></span>
+		        <span class="select5"><font color="green" size="4">注册</font></span>
+		        <div id="list5">
+		        	<span>使用合作伙伴账号登录我买网</span>
+		        	<ul>
+		        		<li><a>中粮</a></li>
+		        		<li><a>QQ</a></li>
+		        		<li><a>人人网</a></li>
+		        		<li><a>开心网</a></li>
+		        		<li><a>支付宝</a></li>
+		        		<li><a>新浪微博</a></li>
+		        		<li><a>百度</a></li>
+		        		<li><a>建行</a></li>
+		        		<li><a>什么值得买</a></li>
+		        		<li><a>中国人寿</a></li>
+		        	</ul>
+		        </div>
+			</div>
+			<div id="foot">
+				<div class="div1">
+		    			<ul>
+		    				<li>Copyright@2009-2016 我买网上购物 All Rights Resevered 中粮海优有限公司</li>
+		    				<li>中粮海优有限公司 北京市朝阳区朝阳门南大街8号18F-09室</li>
+		    				<li>京公网安备 110101020000458 京ICP备 13003995号</li>
+		    				<li>营业执照 911100000555590239L 食品经营许可证：JY11105020028185</li>
+		    			</ul>
+		    		</div>
+			</div>
+		</div>
+	</body>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script>
+		/*$(".div4 .select4").click(function(){
+			var $tab=$(".div4 .select1").val()
+			alert(getCookie("phone_"+$tab));
+		    alert(getCookie("pwd_"+$tab));
+		})*/
+		
+		    $(".div4 .select4").click(function(){
+			    var $that=$(".div4 .select1")
+			if($that.val()==getCookie("phone_"+$that.val()))
+			{
+				
+				if($(".div4 .select2").val()==getCookie("pwd_"+$that.val())){
+					window.open("index.html")
+				}
+				else{
+					alert("密码错误")
+				}
+			}
+			else
+			{
+				alert("用户名不存在")
+			}
+		})
+		     $(".div4 .select5").click(function(){
+		     	window.open("reg.html")
+		     })
+		</script>
+
+</html>
